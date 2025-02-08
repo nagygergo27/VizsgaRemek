@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakelit Webshop</title>
+
+  <!-- Bootstrap CSS (Legújabb verzió) -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Boxicons (Ikonok) -->
+ <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Stílusok -->
+  <style>
+    /* Kezdeti állapot: menü nem látszik */
+    .dropdown-menu {
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    }
+
+    /* Lenyíló menü megjelenése */
+    .dropdown-menu.show {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-3" href="#">Bakelit Webshop</a>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary me-2">
+          <i class='bx bx-search'></i>
+        </button>
+        <input type="text" class="form-control" placeholder="Keresés...">
+      </div>
+      <div class="d-flex align-items-center">
+        <button routerLink="/login" class="btn nav-link text-danger me-2">Bejelentkezés /</button>
+        <button routerLink="/register" class="btn nav-link text-danger me-3">Regisztráció</button>
+        <div class="dropdown">
+          <button class="btn btn-outline-light " type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class='bx bxs-user'></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+            <li><a class="dropdown-item" routerLink="/account">Fiók</a></li>
+            <li><a class="dropdown-item" routerLink="/settings">Beállítások</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" (click)="logout()">Kijelentkezés</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0e0035; border-top: 0px solid #ddd;">
+      <div class="container-fluid d-flex justify-content-center">
+        <button routerLink="/products" class="nav-link text-light fs-5 mx-2">Termékek</button>
+        <button routerLink="/new" class="nav-link text-light fs-5 mx-2">Új</button>
+        <button routerLink="/about" class="nav-link text-light fs-5 mx-2">Névjegy</button>
+        <button routerLink="/contact" class="nav-link text-light fs-5 mx-2">Kapcsolat</button>
+      </div>
+    </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
