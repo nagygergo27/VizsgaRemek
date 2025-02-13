@@ -14,6 +14,7 @@
     "@angular/common": "^19.0.0",
     "@angular/compiler": "^19.0.0",
     "@angular/core": "^19.0.0",
+    "@angular/fire": "^19.0.0",
     "@angular/forms": "^19.0.0",
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
@@ -21,6 +22,7 @@
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
+    "firebase": "^11.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
