@@ -1,7 +1,7 @@
 export const environments = {
     production: false,
     firebaseConfig : {
-        apiKey: "",
+        apiKey: "AIzaSyD9gkUSeF-UsiaNcq2HbEbo9o3CiViedUI",
         authDomain: "vizsgaremek-26549.firebaseapp.com",
         databaseURL: "https://vizsgaremek-26549-default-rtdb.europe-west1.firebasedatabase.app",
         projectId: "vizsgaremek-26549",
