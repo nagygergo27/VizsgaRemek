@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BakelitAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72ac2193acfe9a5727e64372c10c6d6420a6ccb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("BakelitAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BakelitAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fulop\\source\\repos\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj": {}
+    "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fulop\\source\\repos\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj": {
+    "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fulop\\source\\repos\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
+        "projectUniqueName": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
         "projectName": "BakelitAPI",
-        "projectPath": "C:\\Users\\fulop\\source\\repos\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
-        "packagesPath": "C:\\Users\\fulop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fulop\\source\\repos\\BakelitAPI\\BakelitAPI\\obj\\",
+        "projectPath": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
+        "packagesPath": "C:\\Users\\undeadgeryy\\.nuget\\packages\\",
+        "outputPath": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fulop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\undeadgeryy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +48,10 @@
             "FirebaseAdmin": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[3.9.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

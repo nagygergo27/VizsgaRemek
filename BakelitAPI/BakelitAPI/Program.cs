@@ -1,20 +1,30 @@
 using Microsoft.EntityFrameworkCore;
 using BakelitAPI.Data;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddDbContext<ApiContext>
-    (opt => opt.UseInMemoryDatabase("BakelitDb")); 
+    (opt => opt.UseInMemoryDatabase("BakelitDb"));
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddSingleton<FirestoreService>();
+builder.Services.AddSingleton<FirebaseAuthService>();
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.FromFile("vizsgaremek-26549-firebase-adminsdk-fbsvc-d1d9f091fd.json")
+});
+
+Console.WriteLine("Firebase Initialized Successfully!");
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
