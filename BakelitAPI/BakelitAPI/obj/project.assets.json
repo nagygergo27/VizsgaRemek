@@ -8575,19 +8575,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\undeadgeryy\\.nuget\\packages\\": {}
+    "C:\\Users\\fulop\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
+      "projectUniqueName": "C:\\Users\\fulop\\VizsgaRemek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
       "projectName": "BakelitAPI",
-      "projectPath": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
-      "packagesPath": "C:\\Users\\undeadgeryy\\.nuget\\packages\\",
-      "outputPath": "D:\\suli\\vizsgaremek\\BakelitAPI\\BakelitAPI\\obj\\",
+      "projectPath": "C:\\Users\\fulop\\VizsgaRemek\\BakelitAPI\\BakelitAPI\\BakelitAPI.csproj",
+      "packagesPath": "C:\\Users\\fulop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fulop\\VizsgaRemek\\BakelitAPI\\BakelitAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\undeadgeryy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fulop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8595,6 +8595,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
