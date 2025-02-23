@@ -20,8 +20,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
+    AppComponent,    
     NavbarComponent,
     LoginComponent,
     ProductsComponent,
@@ -38,7 +37,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AngularFireModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HomeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
