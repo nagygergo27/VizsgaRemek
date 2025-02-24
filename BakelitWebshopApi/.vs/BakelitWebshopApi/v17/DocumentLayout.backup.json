@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\migrations\\20250224174638_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\migrations\\20250224174638_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\models\\plate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\models\\plate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|c:\\users\\fulop\\source\\repos\\bakelitwebshopapi\\bakelitwebshopapi\\controllers\\platescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73356CF3-A54C-4B3E-A4C3-CAF742683A14}|BakelitWebshopApi\\BakelitWebshopApi.csproj|solutionrelative:bakelitwebshopapi\\controllers\\platescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Program.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Program.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Program.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:56:34.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250224174638_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Migrations\\20250224174638_InitialMigration.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Migrations\\20250224174638_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Migrations\\20250224174638_InitialMigration.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Migrations\\20250224174638_InitialMigration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:46:38.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlatesController.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\PlatesController.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Controllers\\PlatesController.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\PlatesController.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Controllers\\PlatesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:31:59.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:28:59.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Controllers\\ItemsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:28:28.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Item.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Models\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:23:12.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Order.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Models\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:22:48.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Plate.cs",
+              "DocumentMoniker": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Plate.cs",
+              "RelativeDocumentMoniker": "BakelitWebshopApi\\Models\\Plate.cs",
+              "ToolTip": "C:\\Users\\fulop\\source\\repos\\BakelitWebshopApi\\BakelitWebshopApi\\Models\\Plate.cs",
+              "RelativeToolTip": "BakelitWebshopApi\\Models\\Plate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:22:31.837Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

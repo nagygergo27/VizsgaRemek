@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "zMbx58KKFxWxTRfpTFCDOjY12PLs3wNnb2lFihx3EmY=",
+  "Source": "BakelitWebshopApi",
+  "BasePath": "_content/BakelitWebshopApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

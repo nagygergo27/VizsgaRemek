@@ -1,6 +1,0 @@
-@BakelitAPI_HostAddress = http://localhost:5084
-
-GET {{BakelitAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
