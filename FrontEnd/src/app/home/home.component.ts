@@ -1,39 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../config.service';
+import { Component, AfterViewInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: false,
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {  
-  products: any[] = [];
+export class HomeComponent implements AfterViewInit {
+  @ViewChildren('slide') slides!: QueryList<ElementRef>;
+  currentIndex: number = 0;
 
-  constructor(private productService: ProductService) {}
+  ngAfterViewInit() {
+    this.showSlide(this.currentIndex);
+  }
 
-  ngOnInit() {
-    this.productService.getProducts().subscribe(data => {
-      this.products = data;
+  showSlide(index: number) {
+    if (!this.slides || this.slides.length === 0) return;
+
+    this.slides.forEach((slide, i) => {
+      const slideEl = slide.nativeElement;
+      slideEl.classList.remove('active', 'hidden-left', 'hidden-right');
+
+      if (i === index) {
+        slideEl.classList.add('active');
+      } else {
+        slideEl.classList.add(i < index ? 'hidden-left' : 'hidden-right');
+      }
     });
+  }
 
-    const searchIcon = document.querySelector('.search-icon');
-    if (searchIcon) {
-      searchIcon.addEventListener('click', () => {
-        const searchBar = document.querySelector('.search-bar') as HTMLElement;
-        searchBar.classList.toggle('active');
-      });
-    }
-    const menuIcon = document.querySelector('.menu-icon');
-    if (menuIcon) {
-      menuIcon.addEventListener('click', () => {
-        const dropdownMenu = document.querySelector('.dropdown-menu') as HTMLElement;
-        dropdownMenu.classList.toggle('show');
-      });
-    }
+  showNextSlide() {
+    if (!this.slides || this.slides.length === 0) return;
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    this.showSlide(this.currentIndex);
+  }
+
+  showPrevSlide() {
+    if (!this.slides || this.slides.length === 0) return;
+    this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+    this.showSlide(this.currentIndex);
   }
 }
-
-
-
-
