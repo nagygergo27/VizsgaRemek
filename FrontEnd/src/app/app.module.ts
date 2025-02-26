@@ -16,17 +16,22 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { NewComponent } from './new/new.component';
+import { AboutComponent } from './about/about.component';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
     AppComponent,    
     NavbarComponent,
     LoginComponent,
-    ProductsComponent,
     RegisterComponent,
     AccountComponent,
     SettingsComponent,
-    FooterComponent
+    FooterComponent,
+    NewComponent,
+    AboutComponent,
+    BasketComponent
   ],
   imports: [
     HttpClientModule,

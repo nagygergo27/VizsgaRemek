@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ConfigService } from '../config.service';
-
 @Component({
   selector: 'app-products',
   standalone: false,
@@ -9,10 +7,5 @@ import { ConfigService } from '../config.service';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
-  
-  plates: any
-
-  constructor(private config:ConfigService) {
     
   }
-}

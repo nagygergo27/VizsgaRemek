@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Középre igazítás */
+    align-items: center; /* Középre igazítás */
+    height: 100vh; /* Az oldal teljes magassága */
+    background-color: #f4f4f4; /* Háttérszín */
+  }
+
+  /* Kártyák elhelyezése */
+  .main-content {
+    display: flex;
+    gap: 40px; /* Távolság a kártyák között */
+    justify-content: center; /* Kártyák középre igazítása */
+    align-items: center; /* Kártyák függőleges középre igazítása */
+  }
+
+  .card {
+    width: 500px; /* Kártya szélessége */
+    height: 200px; /* Kártya magassága */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    background-color: #f0f0f0; /* Háttérszín változás */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Árnyék erősödése */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit; /* Az örökölt színt használja */
+  }

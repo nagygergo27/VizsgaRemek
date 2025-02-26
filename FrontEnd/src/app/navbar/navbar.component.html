@@ -33,19 +33,20 @@
     <div class="container-fluid">
       <a class="navbar-brand fs-3" href="#">Bakelit Webshop</a>
       <div class="d-flex align-items-center">
-        <button class="btn btn-outline-secondary me-2">
-          <i class='bx bx-search'></i>
-        </button>
-        <input type="text" class="form-control" placeholder="Keresés...">
+        <button routerLink="/products" class="nav-link text-light fs-5 mx-2">Termékek</button>
+        <button routerLink="/new" class="nav-link text-light fs-5 mx-2">Újdonságok</button>
+        <button routerLink="/about" class="nav-link text-light fs-5 mx-2">Kapcsolat</button>
       </div>
-      <div class="d-flex align-items-center">
-        <button routerLink="/login" class="btn nav-link text-danger me-2">Bejelentkezés /</button>
-        <button routerLink="/register" class="btn nav-link text-danger me-3">Regisztráció</button>
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-outline-light" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" routerLink="/basket">
+          <i class='bx bx-basket'></i>
+        </button>
         <div class="dropdown">
           <button class="btn btn-outline-light " type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
             <i class='bx bxs-user'></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+            <li><a class="dropdown-item" routerLink="/login">Bejelentkezés</a></li>
             <li><a class="dropdown-item" routerLink="/account">Fiók</a></li>
             <li><a class="dropdown-item" routerLink="/settings">Beállítások</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -55,15 +56,6 @@
       </div>
     </div>
   </nav>
-    <!-- Bottom Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0e0035; border-top: 0px solid #ddd;">
-      <div class="container-fluid d-flex justify-content-center">
-        <button routerLink="/products" class="nav-link text-light fs-5 mx-2">Termékek</button>
-        <button routerLink="/new" class="nav-link text-light fs-5 mx-2">Új</button>
-        <button routerLink="/about" class="nav-link text-light fs-5 mx-2">Névjegy</button>
-        <button routerLink="/contact" class="nav-link text-light fs-5 mx-2">Kapcsolat</button>
-      </div>
-    </nav>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
