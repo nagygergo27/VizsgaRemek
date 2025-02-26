@@ -7,59 +7,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./home.component.css">
 </head>
-<body>
-    <main>
-        <section class="hero-slider">
-            <div class="slider-container">
-                <div class="slide active" style="background-image: url('assets/images/slider-background.png');">
-                    <div class="slide-content">
-                        <h2>Fedezd fel a legjobb bakeliteket!</h2>
-                        <p>Válogass a legmenőbb lemezek közül most kedvezményesen!</p>
-                        <button class="btn btn-primary">Vásárlás</button>
-                    </div>
-                </div>
-                <div class="slide hidden-right" style="background-image: url('images/slider-background.png');">
-                    <div class="slide-content">
-                        <h2>Klasszikus és modern lemezek egy helyen</h2>
-                        <p>Találd meg kedvenc előadóid albumait nálunk!</p>
-                        <button class="btn btn-secondary">Felfedezés</button>
-                    </div>
-                </div>
-                <div class="slide hidden-right" style="background-image: url('images/slider-background.png');">
-                    <div class="slide-content">
-                        <h2>Különleges kiadások limitált példányszámban</h2>
-                        <p>Ne maradj le a ritkaságokról, amiket csak nálunk találsz meg!</p>
-                        <button class="btn btn-dark">Részletek</button>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-outline-light position-absolute start-0 top-50 translate-middle-y" (click)="showPrevSlide()">&#10094;</button>
-            <button class="btn btn-outline-light position-absolute end-0 top-50 translate-middle-y" (click)="showNextSlide()">&#10095;</button>
-        </section>
+<body style="background: url('assets/images/MainBackground.png') no-repeat center center fixed; background-size: cover;">
+    <main class="main-container">
+        <h1>Üdvözlünk a Bakelit Webshopban!</h1>
+        <p>Fedezd fel a legjobb bakelit lemezeket, és találd meg kedvenc előadóid albumait!</p>
         
-        <section class="featured-products mt-4">
-            <h2 class="text-center">Kiemelt Termékek</h2>
-            <div class="product-carousel">
-                <div class="product">
-                    <img src="images/vinyl1.jpg" alt="Lemez 1" class="img-fluid">
-                    <p>Album 1</p>
-                    <button class="btn btn-primary">Kosárba</button>
-                </div>
-                <div class="product">
-                    <img src="images/vinyl2.jpg" alt="Lemez 2" class="img-fluid">
-                    <p>Album 2</p>
-                    <button class="btn btn-secondary">Kosárba</button>
-                </div>
-                <div class="product">
-                    <img src="images/vinyl3.jpg" alt="Lemez 3" class="img-fluid">
-                    <p>Album 3</p>
-                    <button class="btn btn-dark">Kosárba</button>
-                </div>
-            </div>
-        </section>
+        <div class="quote">"A zene az élet üzemanyaga."</div>
+        <div class="quote">"Egy jó lemez többet mond ezer szónál."</div>
+        <div class="quote">"A bakelit örök – hallgasd a múltat, éld meg a jelent."</div>
+
+        <div class="button-container">
+            <button class="btn btn-primary">Fedezd fel</button>
+            <button class="btn btn-secondary">Kapcsolat</button>
+        </div>
     </main>
 
-    
     <script src="script.ts"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
