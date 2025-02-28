@@ -1,0 +1,16 @@
+        .img-fluid {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Finom árnyék a képeken */
+        }
+
+
+        h2, p {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Finom szövegárnyék */
+        }
+
+        .contact-info {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Árnyék a szövegdoboz körül */
+            padding: 20px; /* Kényelmesebb belső margó */
+            border-radius: 8px; /* Lekerekített sarkok */
+            background-color: #fff; /* Fehér háttér */
+        }
+        
