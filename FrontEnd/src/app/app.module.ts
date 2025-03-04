@@ -31,7 +31,8 @@ import { BasketComponent } from './basket/basket.component';
     FooterComponent,
     NewComponent,
     AboutComponent,
-    BasketComponent
+    BasketComponent,
+    ProductsComponent
   ],
   imports: [
     HttpClientModule,

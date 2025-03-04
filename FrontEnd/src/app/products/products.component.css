@@ -1,0 +1,27 @@
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .card:hover .card-title {
+    color: black !important;
+  }
+  .card-title {
+    color: darkblue;
+  }
+  .card img {
+    object-fit: cover;
+    height: 250px;
+  }
+  .btn-dark {
+    background-color: #131313;
+    border: simple;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-dark:hover {
+    background-color: white;
+    color: black;
+  }

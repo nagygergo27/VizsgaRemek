@@ -5,14 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
-  private apiUrl = 'https://localhost:7106/api/Plates';
+export class ConfigService {
+  private apiUrl = 'https://localhost:7199/api/Products';
   
+  
+
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any> {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-
+  
 }

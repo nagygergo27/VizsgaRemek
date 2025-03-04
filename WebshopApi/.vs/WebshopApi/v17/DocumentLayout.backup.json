@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ervin\\teszt\\WebshopApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\migrations\\20250227123901_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250227123901_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|e:\\ervin\\teszt\\webshopapi\\webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B161767B-742B-45B6-B3C2-90D48654CD84}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250227123901_InitialMigration.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Migrations\\20250227123901_InitialMigration.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Migrations\\20250227123901_InitialMigration.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Migrations\\20250227123901_InitialMigration.cs",
+              "RelativeToolTip": "WebshopApi\\Migrations\\20250227123901_InitialMigration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:39:01.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebshopApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:38:26.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Controllers\\OrdersController.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "WebshopApi\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:37:58.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ItemsController.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "WebshopApi\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:37:23.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Item.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Models\\Item.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Item.cs",
+              "RelativeToolTip": "WebshopApi\\Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:36:13.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Models\\Order.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Order.cs",
+              "RelativeToolTip": "WebshopApi\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:35:37.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Models\\Product.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Models\\Product.cs",
+              "RelativeToolTip": "WebshopApi\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:33:41.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Program.cs",
+              "ToolTip": "E:\\ervin\\teszt\\WebshopApi\\WebshopApi\\Program.cs",
+              "RelativeToolTip": "WebshopApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:32:03.841Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
