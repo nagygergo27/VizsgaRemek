@@ -7,5 +7,6 @@
         public string Artist { get; set; }
         public int Price { get; set; }
         public string Genre { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

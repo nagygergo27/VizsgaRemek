@@ -1,27 +1,93 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
 .card {
-    border-radius: 12px;
-    overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+}
+
+.product-image-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef;
+}
+
+.product-image-container img {
+  width: auto;
+  max-height: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #003366;
+  font-weight: bold;
+}
+
+.card-text.text-muted {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.card-text.fw-bold {
+  font-size: 1.1rem;
+  color: #343a40;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-dark:hover {
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body.d-flex.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .row-cols-md-2 {
+    row-gap: 1rem;
   }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  .product-image-container {
+    width: 100%;
+    height: auto; 
   }
-  .card:hover .card-title {
-    color: black !important;
+}
+
+@media (max-width: 576px) {
+  .row-cols-1 {
+    margin-bottom: 2rem;
   }
-  .card-title {
-    color: darkblue;
+  .product-image-container {
+    width: 100%;
+    height: auto; 
   }
-  .card img {
-    object-fit: cover;
-    height: 250px;
-  }
-  .btn-dark {
-    background-color: #131313;
-    border: simple;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .btn-dark:hover {
-    background-color: white;
-    color: black;
-  }
+}
