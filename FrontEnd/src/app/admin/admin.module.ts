@@ -5,13 +5,15 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { UsersComponent } from './users/users.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     UsersComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    OrdersComponent
   ],
   imports: [
     CommonModule,
