@@ -1,41 +1,55 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Középre igazítás */
-    align-items: center; /* Középre igazítás */
-    height: 100vh; /* Az oldal teljes magassága */
-    background-color: #f4f4f4; /* Háttérszín */
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: #f4f4f4; 
+}
 
-  /* Kártyák elhelyezése */
-  .main-content {
-    display: flex;
-    gap: 40px; /* Távolság a kártyák között */
-    justify-content: center; /* Kártyák középre igazítása */
-    align-items: center; /* Kártyák függőleges középre igazítása */
-  }
+.main-content {
+  display: flex;
+  gap: 40px; 
+  justify-content: center; 
+  align-items: center; 
+}
 
-  .card {
-    width: 500px; /* Kártya szélessége */
-    height: 200px; /* Kártya magassága */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
+.card {
+  width: 500px; 
+  height: 200px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-  .card:hover {
-    background-color: #f0f0f0; /* Háttérszín változás */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Árnyék erősödése */
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit; /* Az örökölt színt használja */
-  }
+.card:hover {
+  background-color: #f0f0f0; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+button.btn-link {
+  text-decoration: none;
+  color: inherit; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
+}
+
+button.btn-link:hover {
+  background-color: #f0f0f0; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}

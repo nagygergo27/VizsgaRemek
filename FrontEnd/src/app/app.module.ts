@@ -19,6 +19,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { NewComponent } from './new/new.component';
 import { AboutComponent } from './about/about.component';
 import { BasketComponent } from './basket/basket.component';
+import { UsComponent } from './us/us.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BasketComponent } from './basket/basket.component';
     NewComponent,
     AboutComponent,
     BasketComponent,
-    ProductsComponent
+    ProductsComponent,
+    UsComponent
   ],
   imports: [
     HttpClientModule,

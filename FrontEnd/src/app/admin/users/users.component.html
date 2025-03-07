@@ -13,14 +13,16 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="main-content">
-                    <h1>Admin Oldal</h1>
+                    <button class="btn btn-link p-0 m-0" routerLink="/admin" style="font-size: 2.5rem; text-decoration: none; color: black;">
+                        Admin Oldal
+                    </button>                      
                     <p>Módosíts, törölj vagy regisztráld a felhasználókat ezen az oldalon.</p>
                 </div>
             </div>
 
             <div class="col-md-4 sidebar">
                 <div class="d-flex flex-column">
-                    <button routerLink="/admin/product" class="btn btn-outline-dark mb-3">Termék Oldal</button>
+                    <button routerLink="/admin/productlist" class="btn btn-outline-dark mb-3">Termék Oldal</button>
                     <!-- "Termékek hozzáadása" gomb, ami felugró ablakot nyit -->
                     <button class="btn btn-outline-dark mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Felhasználó Regisztrálása</button>
                 </div>
@@ -46,22 +48,22 @@
                     <form>
                         <div class="mb-3">
                             <label for="product-name" class="form-label">Név</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control" id="name" placeholder="A neved">
                         </div>
     
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email" required>
+                            <input type="text" class="form-control" id="email" placeholder="Bármilyen email elérhetőséged">
                         </div>
     
                         <div class="mb-3">
                             <label for="password" class="form-label">Jelszó</label>
-                            <input type="password" class="form-control" id="password" required>
+                            <input type="password" class="form-control" id="password" placeholder="Jelszó">
                         </div>
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Jelszó megerősítése</label>
-                            <input type="password" class="form-control" id="password" required>
+                            <input type="password" class="form-control" id="password" placeholder="A jelszó újra">
                         </div>
 
                         <div class="d-flex justify-content-between">
