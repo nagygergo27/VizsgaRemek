@@ -1,22 +1,43 @@
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
-      <h2 class="text-center mb-4">Bejelentkezés</h2>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email" required>
-        </div>
+<div class="card" >
   
-        <div class="mb-3">
-          <label for="password" class="form-label">Jelszó:</label>
-          <input type="password" class="form-control" id="password" required>
-        </div>
-  
-        <button type="submit" class="btn btn-outline-success">Bejelentkezés</button>
-      </form>
-      <div class="text-center mt-3">
-        <a routerLink="/" class="btn btn-outline-secondary">Vissza a főoldalra</a>
-      </div>
+  <div class="card-body">
+    <h5 class="card-title">Sign In</h5>
+
+    <div class="form-floating mb-3">
+      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
     </div>
+
+    <div class="input-group mb-3">
+     
+      <div class="form-floating">
+        <input [(ngModel)]="password" type="password" class="form-control" id="floatingInputGroup1" placeholder="Username">
+        <label for="floatingInputGroup1">Password</label>
+      </div>
+      <span class="eye input-group-text"><i class="bi bi-eye"></i></span>
+    </div>
+
+    <button type="button" (click)="forgotPassword()"  class="btn btn-primary">Forgot password</button>
+
+    
+    <div class="form-floating my-3">
+      <button type="button" (click)="signIn()"  class="btn btn-primary">Login</button>
+      <span class="ms-3"> 
+          <!-- <a  class="stretched-link">Forgot password?</a> -->
+      </span>  
+    </div> 
+    <div *ngIf="emailPassError" class="alert alert-danger" role="alert">
+      Sign in error! {{emailPassMessage|json}}
+    </div>
+
+
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <div class="form-floating">
+      <button (click)="googleAuth()" class="btn btn-primary">Contiune with Google</button>
+    </div> 
+    <div class="form-floating my-3">
+      <button (click)="facebookAuth()" class="btn btn-primary">Contiune with Facebook</button>
+    </div> 
   </div>
+</div>
   

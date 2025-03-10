@@ -41,5 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Ignore environment files
 src/environments/
+
+uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e.json

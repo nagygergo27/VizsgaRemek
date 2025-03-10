@@ -21,6 +21,9 @@ import { AboutComponent } from './about/about.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
 
+import { FormsModule } from '@angular/forms';
+import { environments } from '../environments/environments';
+
 @NgModule({
   declarations: [
     AppComponent,    
@@ -37,15 +40,14 @@ import { UsComponent } from './us/us.component';
     UsComponent
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AngularFireModule,
+    AngularFireModule.initializeApp(environments.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    HomeComponent
+    FormsModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

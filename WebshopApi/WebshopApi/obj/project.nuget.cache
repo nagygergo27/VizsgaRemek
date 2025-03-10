@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ubkQzgc9450=",
+  "dgSpecHash": "CNfRWqm0uCg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diak\\dev\\sziamia\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
+  "projectFilePath": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diak\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Diak\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
