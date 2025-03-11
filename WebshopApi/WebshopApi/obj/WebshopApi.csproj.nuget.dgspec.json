@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj": {}
+    "C:\\Users\\Diak\\dev\\jzs\\viszlát2\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj": {
+    "C:\\Users\\Diak\\dev\\jzs\\viszlát2\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
+        "projectUniqueName": "C:\\Users\\Diak\\dev\\jzs\\viszlát2\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
         "projectName": "WebshopApi",
-        "projectPath": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
+        "projectPath": "C:\\Users\\Diak\\dev\\jzs\\viszlát2\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
         "packagesPath": "C:\\Users\\Diak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\obj\\",
+        "outputPath": "C:\\Users\\Diak\\dev\\jzs\\viszlát2\\VizsgaRemek\\WebshopApi\\WebshopApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

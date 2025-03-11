@@ -1,13 +1,13 @@
 <div class="basket-container">
-    <h2>Termékek a kosárban</h2>
-    <div class="product" *ngFor="let cart of cart; let i = index">
-      <img [src]="cart.image" alt="Product Image" class="product-image"/>
-      <div class="product-details">
-        <h3>{{ cart.title }}</h3>
-        <p class="artist">Művész: {{ cart.artist }}</p>
-        <p class="price">Ár: {{ cart.price }}</p>
-      </div>
-      <button (click)="deleteProduct(product)" class="delete-btn">Törlés</button>
+  <h2>Termékek a kosárban</h2>
+  <div class="product" *ngFor="let cartItem of cart">
+    <img [src]="cartItem.imageUrl" alt="Product Image" class="product-image"/>
+    <div class="product-details">
+      <h3>{{ cartItem.title }}</h3>
+      <p class="artist">Művész: {{ cartItem.artist }}</p>
+      <p class="price">Ár: {{ cartItem.price }}</p>
     </div>
-    <button type="button" class="btn btn-success">Fizetés</button>
+    <button (click)="deleteProduct(cartItem)" class="delete-btn">Törlés</button>
   </div>
+  <button type="button" class="btn btn-success">Fizetés</button>
+</div>
