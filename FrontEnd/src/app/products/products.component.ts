@@ -10,22 +10,21 @@ import { CartService } from '../cart.service';
 })
 export class ProductsComponent {
   products: any[] = [];
-  filteredProducts: any[] = [];  // A keresés által szűrt termékek
+  filteredProducts: any[] = [];
   showModal: boolean = false;
   selectedProduct: any;
-  searchQuery: string = '';  // A keresett kifejezés
+  searchQuery: string = '';
 
   constructor(private config: ConfigService, private cartService: CartService) {
     this.config.getProducts().subscribe(
       (res: any) => {
         this.products = res;
-        this.filteredProducts = res;  // Kezdetben minden termék látszik
+        this.filteredProducts = res;
         console.log(this.products);
       }
     );
   }
 
-  // A keresés végrehajtása
   searchProducts() {
     const query = this.searchQuery.toLowerCase();
     this.filteredProducts = this.products.filter(product => 

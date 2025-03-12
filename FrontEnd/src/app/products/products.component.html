@@ -2,8 +2,8 @@
 
 <!-- Kereső -->
 <div class="container mt-4 mb-4">
-  <div class="d-flex justify-content-center">
-    <input type="text" (keyup.enter)="searchProducts()" [(ngModel)]="searchQuery" class="form-control w-50" placeholder="Keresés cím, előadó vagy műfaj alapján..">
+  <div class="search-container">
+    <input type="text" (keyup.enter)="searchProducts()" [(ngModel)]="searchQuery" class="searchbar" placeholder="Keresés cím, előadó vagy műfaj alapján..">
     <button (click)="searchProducts()" class="searchbutton">Keresés</button>
   </div>
 </div>
@@ -28,10 +28,9 @@
   </div>
 </section>
 
-<!-- Háttér elmosódás -->
+
 <div *ngIf="showModal" class="modal-backdrop"></div>
 
-<!-- Modális ablak (pop-up) -->
 <div *ngIf="showModal" class="modal" tabindex="-1" style="display: block;">
   <div class="modal-dialog modal-custom">
     <div class="modal-content">
@@ -40,15 +39,11 @@
         <button type="button" class="btn-close" (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <!-- Termék kép -->
         <img [src]="selectedProduct.imageUrl" class="product-image-popup" alt="{{ selectedProduct.title }}">
-
-        <!-- Termék neve és ára egy sorban -->
         <div class="product-info">
           <h4><strong>{{ selectedProduct.title }}</strong></h4>
           <h3 class="modal-price">{{ selectedProduct.price }} Ft</h3>
         </div>
-
         <div>
           <h5 class="text-muted">Előadó: {{ selectedProduct.artist }}</h5>
           <h6 class="text-muted">Műfaj: {{ selectedProduct.genre }}</h6>
