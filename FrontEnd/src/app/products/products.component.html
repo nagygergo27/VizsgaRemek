@@ -23,12 +23,12 @@
   </div>
 </section>
 
-<!-- Sötét háttér a modális ablak mögött -->
+<!-- Háttér elmosódás -->
 <div *ngIf="showModal" class="modal-backdrop"></div>
 
 <!-- Modális ablak (pop-up) -->
 <div *ngIf="showModal" class="modal" tabindex="-1" style="display: block;">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-custom">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Vásárlás megerősítése</h5>
@@ -36,17 +36,17 @@
       </div>
       <div class="modal-body">
         <!-- Termék kép -->
-        <img [src]="selectedProduct.imageUrl" class="product-image" alt="{{ selectedProduct.title }}">
+        <img [src]="selectedProduct.imageUrl" class="product-image-popup" alt="{{ selectedProduct.title }}">
         
         <!-- Termék neve és ára egy sorban -->
         <div class="product-info">
           <h4><strong>{{ selectedProduct.title }}</strong></h4>
-          <h4 class="modal-price">{{ selectedProduct.price }} Ft</h4>
+          <h3 class="modal-price">{{ selectedProduct.price }} Ft</h3>
         </div>
         
         <div>
-          <h5 class="text-muted">{{ selectedProduct.artist }}</h5>
-          <h5 class="text-muted">{{ selectedProduct.genre }}</h5>
+          <h5 class="text-muted">Előadó: {{ selectedProduct.artist }}</h5>
+          <h6 class="text-muted">Műfaj: {{ selectedProduct.genre }}</h6>
         </div>
       </div>
       <div class="modal-footer">
