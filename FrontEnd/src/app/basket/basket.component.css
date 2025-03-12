@@ -1,7 +1,8 @@
 .basket-container {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
+    text-align: center;
   }
   
   .product {
@@ -35,16 +36,103 @@
     color: #777;
   }
   .delete-btn {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: transparent;
+    color: #ff2727;
+    font-weight: bold;
+    border: 2px solid #ff2727;
+    padding: 8px 16px;
+    border-radius: 4px;
     font-size: 14px;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s; 
+    margin-right: 20px;
   }
   
   .delete-btn:hover {
     background-color: #ff0000;
+    color: white;
   }
+
+.pay-btn {
+  background: linear-gradient(145deg, #56ab2f, #a8e063);
+  color: white;
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.pay-btn:hover {
+  background: linear-gradient(145deg, #a8e063, #56ab2f);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fizetési mód popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-popup, .success-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+}
+
+.payment-popup input[type="radio"] {
+  margin: 10px;
+}
+
+.confirm-btn, .close-btn {
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.confirm-btn:hover, .close-btn:hover {
+  background-color: #8bcc3b;
+}
+
+.success-icon {
+  margin: 20px 0;
+}
+
+.success-icon svg {
+  width: 80px;
+  height: 80px;
+  fill: none;
+}
+
+.success-popup h3 {
+  color: #56ab2f;
+  font-size: 24px;
+}
+
+.success-popup .close-btn {
+  background-color: #050505;
+  border-radius: 50px;
+}
+
+.success-popup .close-btn:hover {
+  background-color: #272727;
+}

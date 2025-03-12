@@ -7,7 +7,35 @@
       <p class="artist">Művész: {{ cartItem.artist }}</p>
       <p class="price">Ár: {{ cartItem.price }}</p>
     </div>
-    <button (click)="deleteProduct(cartItem)" class="delete-btn">Törlés</button>
+    <button (click)="deleteProduct(cartItem.id)" class="delete-btn">Törlés</button>
   </div>
-  <button type="button" class="btn btn-success">Fizetés</button>
+  <button type="button" class="pay-btn" (click)="openPaymentPopup()">Fizetés</button>
+</div>
+
+<!-- Fizetési mód választó popup -->
+<div *ngIf="paymentPopupVisible" class="popup-overlay" (click)="closePaymentPopup()">
+  <div class="payment-popup" (click)="$event.stopPropagation()">
+    <h3>Válasszon fizetési módot:</h3>
+    <label>
+      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="cash" /> Készpénzes fizetés
+    </label>
+    <label>
+      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="card" /> Bankkártyás fizetés
+    </label>
+    <button (click)="confirmPayment()" class="confirm-btn">Fizetés megerősítése</button>
+  </div>
+</div>
+
+<!-- Sikeres rendelés popup -->
+<div *ngIf="orderSuccessPopupVisible" class="popup-overlay" (click)="closeSuccessPopup()">
+  <div class="success-popup" (click)="$event.stopPropagation()">
+    <h3>Sikeres rendelés!</h3>
+    <div class="success-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="80" fill="none" viewBox="0 0 24 24" stroke="green">
+        <circle cx="12" cy="12" r="10" stroke-width="3" fill="white" />
+        <path d="M6 12l4 4L18 8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <button (click)="closeSuccessPopup()" class="close-btn">Rendben</button>
+  </div>
 </div>

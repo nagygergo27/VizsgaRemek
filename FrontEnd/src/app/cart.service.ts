@@ -5,19 +5,26 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  private cart:any = []
-  private cartSub = new BehaviorSubject<any> ([])
+  private cart: any[] = [];
+  private cartSub = new BehaviorSubject<any[]>([]);
+
   constructor() { }
+
   getCart() {
-    return this.cartSub
+    return this.cartSub.asObservable();
   }
-  addProduct(products:any) {
-    this.cart.push(products)
-    this.cartSub.next(this.cart)
+
+  addProduct(product: any) {
+    this.cart.push(product);
+    this.cartSub.next(this.cart);
   }
-  deleteProduct(products: any) { {
-      this.cart.splice(products);
-      this.cartSub.next(this.cart);
+
+  deleteProduct(product: any) {
+    const productIndex = this.cart.findIndex(p => p.id === product.id);
+    
+    if (productIndex !== -1) {
+      this.cart.splice(productIndex, 1);
+      this.cartSub.next(this.cart); 
     }
   }
 }

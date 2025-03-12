@@ -46,19 +46,41 @@ body {
   color: #343a40;
 }
 
-.btn-dark {
-  background-color: #343a40;
-  border-color: #343a40;
+.btn-buy {
+  background-color: #000;
   color: white;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  text-align: center;
+  font-weight: bold;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.btn-dark:hover {
-  background-color: #212529;
-  border-color: #212529;
+.btn-buy:hover {
+  background-color: #333;
+}
+
+.btn-cancel {
+  background-color: transparent;  /* Átlátszó háttér */
+  color: #ff2727;                  /* Piros szöveg */
+  font-weight: bold;               /* Vastag szöveg */
+  border: 2px solid #ff2727;       /* Piros szegély */
+  padding: 8px 16px;               /* Belső margó */
+  border-radius: 4px;              /* Enyhe lekerekítés */
+  font-size: 14px;                 /* Szöveg méret */
+  text-transform: uppercase;       /* Nagybetűs szöveg */
+  cursor: pointer;                 /* Kéz ikon */
+  transition: 0.4s; 
+}
+
+.btn-cancel:hover {
+  background-color: #ff2727;       /* Piros háttér hover állapotban */
+  color: white;                    /* Fehér szöveg hover állapotban */
+  box-shadow: 0 0 8px 2px rgba(255, 77, 77, 0.8); /* Piros glówing effekt */
+  border-color: #ff0000; 
 }
 
 .card:hover {
@@ -92,7 +114,6 @@ body {
   }
 }
 
-/* háttér */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -170,4 +191,21 @@ body.modal-open {
 
 .card-text.text-muted {
   margin-top: 10px;
+}
+
+.searchbutton {
+  background-color: #1a1a1a;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.searchbutton:hover {
+  background-color: #333333;
+}
+
+.searchbutton:active {
+  background-color: #646464;
+  transform: scale(0.98);
 }

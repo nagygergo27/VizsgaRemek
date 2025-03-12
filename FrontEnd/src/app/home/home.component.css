@@ -53,15 +53,7 @@ p {
   transition: background 0.3s ease;
 }
 
-.btn-primary {
-  background: #007bff;
-  color: white;
-  border: none;
-}
 
-.btn-primary:hover {
-  background: #0056b3;
-}
 
 .btn-secondary {
   background: #6c757d;
@@ -71,4 +63,19 @@ p {
 
 .btn-secondary:hover {
   background: #545b62;
+}
+
+.btn-white {
+  background-color: rgba(red, green, blue, 0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-white:hover {
+  background-color: rgba(red, green, blue, 0);
+  color: #afafaf;
 }

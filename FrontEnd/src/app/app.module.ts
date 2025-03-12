@@ -37,6 +37,7 @@ import { environments } from '../environments/environments';
     AboutComponent,
     BasketComponent,
     ProductsComponent,
+    HomeComponent,
     UsComponent
   ],
   imports: [
