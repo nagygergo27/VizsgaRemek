@@ -32,30 +32,18 @@ export class LoginComponent {
       .catch((e)=>console.log("Hiba a Google belépésnél!",e))
   }
 
-  facebookAuth(){
-    this.auth.facebookAuth()
-      .then(
-        ()=>
-          {
-            console.log("Beléptél Facebook-val!")
-            this.router.navigate(['spiders'])
-          }
-    )
-
-      .catch(()=>console.log("Hiba a Facebook belépésnél!"))
-  }
 
   signIn(){
     console.log(this.email,"; ",this.password)
     this.auth.signInMailPassword(this.email, this.password).then(
-      ()=>this.router.navigate(["spiders"])
+      ()=>this.router.navigate([''])
     ).catch(
       (e)=>{
         if (e.code!=4002){
           this.emailPassError=true
           this.emailPassMessage=e
         }else{
-          this.router.navigate(["spiders"])
+          this.router.navigate([''])
         }
 
       }

@@ -1,25 +1,25 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
   <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
     <h2 class="text-center mb-4">Regisztráció</h2>
-    <form>
+    <form (ngSubmit)="register()">
       <div class="mb-3">
         <label for="name" class="form-label">Név:</label>
-        <input type="text" class="form-control" id="name" required>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="email" required>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Jelszó:</label>
-        <input type="password" class="form-control" id="password" required>
+        <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
       </div>
 
       <div class="mb-3">
         <label for="passwordConfirm" class="form-label">Jelszó megerősítése:</label>
-        <input type="password" class="form-control" id="passwordConfirm" required>
+        <input type="password" class="form-control" id="passwordConfirm" [(ngModel)]="passwordConfirm" name="passwordConfirm" required>
       </div>
 
       <button type="submit" class="btn btn-outline-success">Regisztráció</button>
@@ -29,6 +29,3 @@
     </div>
   </div>
 </div>
-
-
-

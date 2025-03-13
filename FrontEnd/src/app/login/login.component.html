@@ -11,7 +11,7 @@
     <div class="input-group mb-3">
      
       <div class="form-floating">
-        <input [(ngModel)]="password" type="password" class="form-control" id="floatingInputGroup1" placeholder="Username">
+        <input [(ngModel)]="password" type="password" (keyup.enter)="signIn()" class="form-control" id="floatingInputGroup1" placeholder="Username">
         <label for="floatingInputGroup1">Password</label>
       </div>
       <span class="eye input-group-text"><i class="bi bi-eye"></i></span>
@@ -35,8 +35,8 @@
     <div class="form-floating">
       <button (click)="googleAuth()" class="btn btn-primary">Contiune with Google</button>
     </div> 
-    <div class="form-floating my-3">
-      <button (click)="facebookAuth()" class="btn btn-primary">Contiune with Facebook</button>
+    <div class="form-floating">
+      <button routerLink="/register" class="btn btn-primary">Regiszráció</button>
     </div> 
   </div>
 </div>

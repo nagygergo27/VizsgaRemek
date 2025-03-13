@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { Component, AfterViewInit, QueryList, ViewChildren, ElementRef } from '@
 export class HomeComponent implements AfterViewInit {
   @ViewChildren('slide') slides!: QueryList<ElementRef>;
   currentIndex: number = 0;
+  isLoggedIn: boolean = false;
+  userName: string = '';
 
   ngAfterViewInit() {
     this.showSlide(this.currentIndex);
@@ -38,5 +41,20 @@ export class HomeComponent implements AfterViewInit {
     if (!this.slides || this.slides.length === 0) return;
     this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
     this.showSlide(this.currentIndex);
+  }
+  
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.getIsLoggedUser().subscribe(loggedIn => {
+      this.isLoggedIn = loggedIn;
+
+      if (this.isLoggedIn) {
+        const user = this.authService.loggedUser;
+        this.userName = user?.displayName || ''; 
+      } else {
+        this.userName = '';
+      }
+    });
   }
 }

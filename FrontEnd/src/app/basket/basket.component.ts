@@ -9,20 +9,29 @@ import { CartService } from '../cart.service';
 })
 export class BasketComponent {
   cart: any[] = [];
-  product: any;
   paymentPopupVisible: boolean = false;  // Fizetési mód választó popup
   orderSuccessPopupVisible: boolean = false;  // Sikeres rendelés popup
   paymentMethod: string = '';  // Kiválasztott fizetési mód
 
-  constructor(private cartServices: CartService) {
-    this.cartServices.getCart().subscribe(
-      (res) => this.cart = res
-    );
+  constructor(private cartService: CartService) {
+    this.loadCart(); // Kosár betöltése a localStorage-ból
+  }
+
+  // Kosár betöltése a localStorage-ból
+  loadCart() {
+    const storedCart = localStorage.getItem('cart');
+    this.cart = storedCart ? JSON.parse(storedCart) : [];
+  }
+
+  // Kosár frissítése a localStorage-ban
+  updateLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
   // Termék törlése a kosárból
-  deleteProduct(productId: any) {
-    this.cartServices.deleteProduct(productId);
+  deleteProduct(productId: number) {
+    this.cart = this.cart.filter(item => item.id !== productId); // Szűrés, hogy eltávolítjuk a megfelelő terméket
+    this.updateLocalStorage(); // Kosár frissítése a localStorage-ban
   }
 
   // Fizetési mód választó popup megnyitása
@@ -40,9 +49,16 @@ export class BasketComponent {
     if (this.paymentMethod) {
       this.paymentPopupVisible = false;  // Fizetési popup bezárása
       this.orderSuccessPopupVisible = true;  // Sikeres rendelés popup megjelenítése
+      this.clearCart(); // Kosár kiürítése sikeres rendelés után
     } else {
       alert('Kérem válassza ki a fizetési módot!');
     }
+  }
+
+  // Kosár kiürítése
+  clearCart() {
+    this.cart = []; // Kosár állapotának frissítése
+    localStorage.removeItem('cart'); // Kosár törlése a localStorage-ból
   }
 
   // Sikeres rendelés popup bezárása
