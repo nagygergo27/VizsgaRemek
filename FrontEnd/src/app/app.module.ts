@@ -21,9 +21,10 @@ import { AboutComponent } from './about/about.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
 
-import { FormsModule } from '@angular/forms';
+
 import { environments } from '../environments/environments';
 import { UsersComponent } from './users/users.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

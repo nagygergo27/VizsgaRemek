@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.left-container h1, .left-container h2, .left-container h5 {
+    margin: 0 0 10px 0;
+}
+
+.album-info {
+    margin-top: 20px;
+}
+
+.album-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.album-info input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.preview-container {
+    margin-bottom: 15px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.inputs-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    padding: 6px;
+    width: 100%;
+    max-width: 310px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.del-button {
+    margin-left: 5px;
+    padding: 8px 20px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+}
+
+.del-button:hover {
+    background-color: rgb(165, 0, 0);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.add-button {
+    margin-top: 10px;
+    padding: 10px 13px;
+    background-color: #002ca7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5), 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.add-button:hover {
+    background-color: #00f7ff;
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cart-button {
+    margin-top: 20px;
+    margin: auto;
+    padding: 15px 30px;
+    font-size: 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+    box-shadow: 2px 3px 20px rgba(0, 47, 255, 1), 0px 4px 6px rgba(0, 47, 255, 1);
+}
+
+.cart-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-container, .inputs-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .inputs-container {
+        align-items: flex-start;
+    }
+}

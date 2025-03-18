@@ -47,6 +47,7 @@ export class BasketComponent {
   // Rendelés megerősítése
   confirmPayment() {
     if (this.paymentMethod) {
+      //megrendeles inditasa UID
       this.paymentPopupVisible = false;  // Fizetési popup bezárása
       this.orderSuccessPopupVisible = true;  // Sikeres rendelés popup megjelenítése
       this.clearCart(); // Kosár kiürítése sikeres rendelés után

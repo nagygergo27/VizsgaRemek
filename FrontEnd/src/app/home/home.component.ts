@@ -10,6 +10,7 @@ export class HomeComponent implements AfterViewInit {
   @ViewChildren('slide') slides!: QueryList<ElementRef>;
   currentIndex: number = 0;
   isLoggedIn: boolean = false;
+  isAdmin: boolean = false;
   userName: string = '';
 
   ngAfterViewInit() {
@@ -55,6 +56,10 @@ export class HomeComponent implements AfterViewInit {
       } else {
         this.userName = '';
       }
+    });
+
+    this.authService.getIsAdmin().subscribe(isAdmin => {
+      this.isAdmin = isAdmin;
     });
   }
 }

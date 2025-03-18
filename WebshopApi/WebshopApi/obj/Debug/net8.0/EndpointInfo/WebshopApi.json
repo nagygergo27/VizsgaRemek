@@ -574,7 +574,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "plateId": {
+          "productId": {
             "type": "integer",
             "format": "int32"
           },
@@ -582,7 +582,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "totalPrice": {
+          "price": {
             "type": "integer",
             "format": "int32"
           }
@@ -604,9 +604,12 @@
             "type": "string",
             "format": "date-time"
           },
-          "amount": {
-            "type": "integer",
-            "format": "int32"
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Item"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

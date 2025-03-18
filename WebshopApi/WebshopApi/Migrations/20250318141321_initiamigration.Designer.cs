@@ -12,8 +12,8 @@ using WebshopApi.Data;
 namespace WebshopApi.Migrations
 {
     [DbContext(typeof(WebshopApiContext))]
-    [Migration("20250305125823_AddImageUrlToProduct")]
-    partial class AddImageUrlToProduct
+    [Migration("20250318141321_initiamigration")]
+    partial class initiamigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,6 @@ namespace WebshopApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Price")
@@ -71,13 +70,15 @@ namespace WebshopApi.Migrations
                     b.Property<int>("Piece")
                         .HasColumnType("int");
 
-                    b.Property<int>("PlateId")
+                    b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("TotalPrice")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
 
                     b.ToTable("Item");
                 });
@@ -90,9 +91,6 @@ namespace WebshopApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -102,6 +100,20 @@ namespace WebshopApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("WebshopApi.Models.Item", b =>
+                {
+                    b.HasOne("WebshopApi.Models.Order", null)
+                        .WithMany("Items")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WebshopApi.Models.Order", b =>
+                {
+                    b.Navigation("Items");
                 });
 #pragma warning restore 612, 618
         }

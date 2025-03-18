@@ -12,6 +12,8 @@ import { NewComponent } from './new/new.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
 import { UsersComponent } from './users/users.component';
+import { ProductListComponent } from './productlist/productlist.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 const routes: Routes = [
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'new', component: NewComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'productlist', component: ProductListComponent },
+  { path: 'orders', component: OrdersComponent },
   { path: 'us', component: UsComponent },
   // { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: '**', redirectTo: '' }

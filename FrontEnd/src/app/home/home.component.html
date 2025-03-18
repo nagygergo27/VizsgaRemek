@@ -22,7 +22,12 @@
         <div class="button-container">
             <button routerLink="/products" class="btn btn-white">Fedezd fel</button>
             <button routerLink="/about" class="btn btn-white">Kapcsolat</button>
-        </div>        
+        </div>
+        <div *ngIf="isAdmin" class="admin-buttons">
+            <button routerLink="/users" class="btn btn-primary">Felhasználók kezelése</button>
+            <button routerLink="/productlist" class="btn btn-secondary">Termékek kezelése</button>
+            <button routerLink="/orders" class="btn btn-success">Rendelések kezelése</button>
+          </div>       
     </main>
 
     <script src="script.ts"></script>

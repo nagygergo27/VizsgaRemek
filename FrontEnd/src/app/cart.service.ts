@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private cart: any[] = [];
   private cartSub = new BehaviorSubject<any[]>([]);
+  userUid = "1"
 
   constructor() {
     this.loadCart(); // Betöltjük a kosarat a localStorage-ból

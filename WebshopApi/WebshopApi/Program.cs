@@ -1,14 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using WebshopApi.Data;
 
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<WebshopApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WebshopApiContext") ?? throw new InvalidOperationException("Connection string 'WebshopApiContext' not found.")));
 
 var connectionString = builder.Configuration.GetConnectionString("WebshopApiContext");
-
-builder.Services.AddDbContext<WebshopApiContext>(options =>
-    options.UseSqlServer(connectionString, sqlOptions =>
-        sqlOptions.EnableRetryOnFailure()
-    ));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
