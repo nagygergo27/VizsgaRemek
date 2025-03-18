@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div>
         <h1>Termék Oldal</h1>
     </div>
@@ -6,13 +6,16 @@
         <button routerLink="/admin/users" class="btn btn-outline-dark mb-3">Felhasználók kezelése</button>
         <button routerLink="/admin/orders" class="btn btn-outline-dark mb-3">Rendelések kezelése</button>
         <button routerLink="/admin/productlist" class="btn btn-outline-dark mb-3">Termékek oldal</button>
-        <!-- Gomb, amely megnyitja a modális ablakot -->
-        <button class="btn btn-outline-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Termék hozzáadása</button>
+         Gomb, amely megnyitja a modális ablakot -->
+        <!-- <button class="btn btn-outline-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Termék hozzáadása</button>
     </div>
-</div>
+</div> -->
 
 <!-- Modális ablak -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -22,7 +25,7 @@
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="product-name" class="form-label">Termék Neve</label>
+                        <label [(ngModel)]="newProduct.title" for="product-name" class="form-label">Termék Neve</label>
                         <input type="text" class="form-control" id="name" placeholder="Adja meg a lemez nevét">
                     </div>
 
@@ -48,7 +51,7 @@
                     </div>
 
                     <div class="d-flex justify-content-between">
-                        <button type="submit" class="btn btn-outline-success">Termék hozzáadása</button>
+                        <button (click)="addProduct()" class="btn btn-outline-success">Termék hozzáadása</button>
                         <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">Bezárás</button>
                     </div>
                 </form>
@@ -72,14 +75,16 @@
         <tbody>
             <tr *ngFor="let product of filteredProducts; let i = index">
                 <td>{{ i + 1 }}</td>
-                <td>{{ product.title }}</td>
-                <td>{{ product.artist }}</td>
-                <td>{{ product.genre }}</td>
-                <td>{{ product.price }} Ft</td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.title"></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.artist"></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.genre"></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.price"></td>
                 <td>
-                    <button class="btn btn-primary" (click)="editProduct(product.id)">Szerkesztés</button>
+                    <button type="button" class="btn btn-warning" (click)="editProduct(product)">Szerkesztés</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteProduct(product)">Törlés</button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
+ --> 

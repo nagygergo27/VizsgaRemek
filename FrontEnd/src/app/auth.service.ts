@@ -31,6 +31,8 @@ export class AuthService {
         if (user) {
           this.loggedUser = user?._delegate;
           console.log("ZUser", user);
+          this.loggedUserSub.next(true);
+          this.userSub.next(this.loggedUser);
 
           user.getIdToken().then(
             (t: any) => {
@@ -81,6 +83,8 @@ export class AuthService {
 
   // Felhasználók lekérése
   getUsers() {
+
+    console.log("GetUsers",this.loggedUser.accessToken)
     if (this.loggedUser.accessToken) {
       const headers = new HttpHeaders().set('Authorization', this.loggedUser.accessToken);
       return this.http.get(this.apiUrl + "users", { headers });

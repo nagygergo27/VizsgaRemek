@@ -11,9 +11,11 @@ import { AboutComponent } from './about/about.component';
 import { NewComponent } from './new/new.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
+import { UsersComponent } from './users/users.component';
+
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component:HomeComponent  },
   { path: 'products', component: ProductsComponent },
   { path: 'navbar', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
@@ -23,8 +25,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'new', component: NewComponent },
   { path: 'basket', component: BasketComponent },
+  { path: 'users', component: UsersComponent },
   { path: 'us', component: UsComponent },
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  // { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: '**', redirectTo: '' }
 ];
 

@@ -23,6 +23,7 @@ import { UsComponent } from './us/us.component';
 
 import { FormsModule } from '@angular/forms';
 import { environments } from '../environments/environments';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { environments } from '../environments/environments';
     BasketComponent,
     ProductsComponent,
     HomeComponent,
-    UsComponent
+    UsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
