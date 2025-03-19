@@ -61,7 +61,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     FormsModule,
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 42c30a90670ff6910015ac4bc274b59fb5aa7c96
     // Az Angular translate module betöltése
     HttpClientModule,
     TranslateModule.forRoot({

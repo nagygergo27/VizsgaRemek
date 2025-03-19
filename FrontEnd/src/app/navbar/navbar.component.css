@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .dropdown-menu {
     opacity: 0;
     transform: translateY(-10px);
@@ -11,6 +12,8 @@
     visibility: visible;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
 }
+=======
+>>>>>>> 42c30a90670ff6910015ac4bc274b59fb5aa7c96
 .flag-icon {
     width: 20px; /* Igazítsd az ikon méretét igény szerint */
     margin-bottom: 3px;
