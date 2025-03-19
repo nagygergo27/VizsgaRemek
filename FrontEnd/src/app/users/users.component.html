@@ -1,39 +1,46 @@
-<h1>Új user</h1>
-{{loggedUser|json}}
 <div class="container">
     <button routerLink="/admin/users" class="btn btn-outline-dark mb-3">Felhasználók kezelése</button>
     <button routerLink="/admin/orders" class="btn btn-outline-dark mb-3">Rendelések kezelése</button>
     <button routerLink="/admin/productlist" class="btn btn-outline-dark mb-3">Termékek oldal</button>
 
-users:{{users|json}}
-
     <div *ngFor="let user of users" class="row my-2">
 
-        <div class="col">
+        <div class="col2">
             <img referrerpolicy="no-referrer" *ngIf="user.photoURL" [src]="user.photoURL" class="img-thumbnail" alt="...">
         </div>
-        <div class="col">
+        <div class="col1">
             {{user.displayName}}
         </div>
-        <div class="col">
+        <div class="col1">
             {{user.email}}
-        </div>
-        <div>
-            <button (click)="loggedUser()" class="btn btn-outline-dark mb-3">Termékek oldal</button>
         </div>
         <div class="col">
             <div class="row">
                 <div class="col">
                     <div class="form-check form-switch">
-                        <input (change)="change(user.uid)" [(ngModel)]="user.claims.moderator" class="form-check-input" type="checkbox" id="moderator">
-                        <label class="form-check-label" for="moderator">Moderator</label>
+                        <input 
+                            (change)="change(user.uid)" 
+                            [(ngModel)]="user.claims.moderator" 
+                            class="form-check-input" 
+                            type="checkbox" 
+                            [id]="'moderator_' + user.uid"
+                        >
+                        <label class="form-check-label" [for]="'moderator_' + user.uid">Moderator</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-check form-switch">
-                        <input (change)="change(user.uid)" [(ngModel)]="user.claims.admin" class="form-check-input" type="checkbox" id="admin">
-                        <label class="form-check-label" for="admin">Admin</label>
+                        <input 
+                            (change)="change(user.uid)" 
+                            [(ngModel)]="user.claims.admin" 
+                            class="form-check-input" 
+                            type="checkbox" 
+                            [id]="'admin_' + user.uid"
+                        >
+                        <label class="form-check-label" [for]="'admin_' + user.uid">Admin</label>
                     </div>
                 </div>
             </div>        
         </div>
+    </div>
+</div>

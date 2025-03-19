@@ -9,7 +9,7 @@ import { CartService } from '../cart.service';  // Importáljuk a CartService-t
 })
 export class NewComponent {
   inputCount: number = 3;
-  fileInputs: string[] = ['fileUpload1', 'fileUpload2', 'fileUpload3'];
+  fileInputs: any[] = new Array(3).fill(null); // Kezdetben 3 input mező
 
   albumCoverPreview: string | null = null;
   albumTitle: string = '';  // Album címe, amit a felhasználó beír
@@ -21,40 +21,24 @@ export class NewComponent {
 
     if (file) {
       const reader = new FileReader();
-
       reader.onload = () => {
         this.albumCoverPreview = reader.result as string;
       };
-
       reader.readAsDataURL(file);
     }
   }
 
-  onFileSelected(event: any): void {
+  onFileSelected(event: any, index: number): void {
     const file: File = event.target.files[0];
-
     if (file) {
-      const img = new Image();
-      const reader = new FileReader();
-
-      reader.onload = () => {
-        img.src = reader.result as string;
-        img.onload = () => {
-          if (img.width > 500 || img.height > 500) {
-            alert("A képnek maximum 500x500 px-nek kell lennie.");
-            event.target.value = '';
-          }
-        };
-      };
-
-      reader.readAsDataURL(file);
+      this.fileInputs[index] = file; // A kiválasztott fájlt mentjük a megfelelő indexen
     }
   }
 
   addFileInput(): void {
-    if (this.inputCount < 15) {
+    if (this.fileInputs.length < 15) {
+      this.fileInputs.push(null); // Új üres mezőt adunk hozzá
       this.inputCount++;
-      // this.fileInputs.push(fileUpload${this.inputCount});
     }
   }
 
@@ -66,17 +50,19 @@ export class NewComponent {
   }
 
   addToCart(): void {
-  console.log("Album címe: ", this.albumTitle);
+    console.log("Album címe: ", this.albumTitle);
+    
+    if (this.albumTitle.trim()) {
+      const album = {
+        title: this.albumTitle,
+        cover: this.albumCoverPreview,
+        tracks: this.fileInputs.filter(file => file !== null) // Csak a feltöltött fájlokat küldjük tovább
+      };
 
-  if (this.albumTitle) {
-    const album = {
-      title: this.albumTitle
-    };
-    this.cartService.addProduct(album);  // Kosárba adás
-    alert("Album hozzáadva a kosárhoz!");
-  } else {
-    alert("Kérlek add meg a címét az albumhoz!");
+      this.cartService.addProduct(album);  // Kosárba adás
+      alert("Album hozzáadva a kosárhoz!");
+    } else {
+      alert("Kérlek add meg a címét az albumhoz!");
+    }
   }
-}
-
 }

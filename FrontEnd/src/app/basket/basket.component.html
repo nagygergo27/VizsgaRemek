@@ -1,41 +1,41 @@
 <div class="basket-container">
-  <h2>Termékek a kosárban</h2>
+  <h2>{{ 'basket_title' | translate }}</h2>
   <div class="product" *ngFor="let cartItem of cart">
     <img [src]="cartItem.imageUrl" alt="Product Image" class="product-image"/>
     <div class="product-details">
       <h3>{{ cartItem.title }}</h3>
-      <p class="artist">Művész: {{ cartItem.artist }}</p>
-      <p class="price">Ár: {{ cartItem.price }}</p>
+      <p class="artist">{{ 'artist_label' | translate }}: {{ cartItem.artist }}</p>
+      <p class="price">{{ 'price_label' | translate }}: {{ cartItem.price }}</p>
     </div>
-    <button (click)="deleteProduct(cartItem.id)" class="delete-btn">Törlés</button>
+    <button (click)="deleteProduct(cartItem.id)" class="delete-btn">{{ 'delete_button' | translate }}</button>
   </div>
-  <button type="button" class="pay-btn" (click)="openPaymentPopup()">Fizetés</button>
+  <button type="button" class="pay-btn" (click)="openPaymentPopup()">{{ 'pay_button' | translate }}</button>
 </div>
 
 <!-- Fizetési mód választó popup -->
 <div *ngIf="paymentPopupVisible" class="popup-overlay" (click)="closePaymentPopup()">
   <div class="payment-popup" (click)="$event.stopPropagation()">
-    <h3>Válasszon fizetési módot:</h3>
+    <h3>{{ 'choose_payment_method' | translate }}</h3>
     <label>
-      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="cash" /> Készpénzes fizetés
+      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="cash" /> {{ 'cash_payment' | translate }}
     </label>
     <label>
-      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="card" /> Bankkártyás fizetés
+      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="card" /> {{ 'card_payment' | translate }}
     </label>
-    <button (click)="confirmPayment()" class="confirm-btn">Fizetés megerősítése</button>
+    <button (click)="confirmPayment()" class="confirm-btn">{{ 'confirm_payment_button' | translate }}</button>
   </div>
 </div>
 
 <!-- Sikeres rendelés popup -->
 <div *ngIf="orderSuccessPopupVisible" class="popup-overlay" (click)="closeSuccessPopup()">
   <div class="success-popup" (click)="$event.stopPropagation()">
-    <h3>Sikeres rendelés!</h3>
+    <h3>{{ 'order_success' | translate }}</h3>
     <div class="success-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="80" fill="none" viewBox="0 0 24 24" stroke="green">
         <circle cx="12" cy="12" r="10" stroke-width="3" fill="white" />
         <path d="M6 12l4 4L18 8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <button (click)="closeSuccessPopup()" class="close-btn">Rendben</button>
+    <button (click)="closeSuccessPopup()" class="close-btn">{{ 'close_button' | translate }}</button>
   </div>
 </div>

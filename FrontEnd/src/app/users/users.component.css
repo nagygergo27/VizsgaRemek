@@ -1,0 +1,74 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+button {
+    margin-left: 3px;
+}
+
+img.img-thumbnail {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 4px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid rgba(53, 53, 53, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.col {
+    text-align: center;
+}
+
+.col1 {
+    font-size: 22px;
+}
+
+.Product-btn {
+    right: 0px !important;
+}
+
+.form-check-label {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.form-check-input {
+    display: none;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: #28a745;
+}
+
+.form-check-input:checked + .form-check-label::before {
+    content: '✔';
+    font-size: 24px;
+    color: #28a745;
+    transition: color 0.3s ease;
+}
+
+.form-check-input:not(:checked) + .form-check-label {
+    color: #dc3545;
+}
+
+.form-check-input:not(:checked) + .form-check-label::before {
+    content: '❌';
+    font-size: 24px;
+    color: #dc3545;
+    transition: color 0.3s ease;
+}

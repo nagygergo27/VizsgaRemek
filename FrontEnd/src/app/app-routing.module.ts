@@ -8,12 +8,13 @@ import { RegisterComponent } from './register/register.component';
 import { AccountComponent } from './account/account.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AboutComponent } from './about/about.component';
-import { NewComponent } from './new/new.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
 import { UsersComponent } from './users/users.component';
 import { ProductListComponent } from './productlist/productlist.component';
 import { OrdersComponent } from './orders/orders.component';
+import { NewComponent } from './new/new.component';
+
 
 
 const routes: Routes = [

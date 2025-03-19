@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Egyedi Lemez</title>
     <link rel="stylesheet" href="new.component.css">
 </head>
 <body>
     <div class="main-container">
         <div class="left-container">
             <h1>Egyedi lemez készítése</h1>
-            <h2>Kérlek töltsd fel a lemezre kívánt zeneszámokat mp3 fájl formátumban</h2>
+            <h2>Kérlek töltsd fel a lemezre kívánt zeneszámokat MP3 fájl formátumban</h2>
             <h5>(Maximum 15 zeneszámot lehet rárakni az egyedi lemezre)</h5>
 
             <div class="album-info">
                 <label for="albumCover">Album borító: </label>
-                <div ngIf="albumCoverPreview" class="preview-container">
+                <div *ngIf="albumCoverPreview" class="preview-container">
                     <img [src]="albumCoverPreview" alt="Album Cover Preview" class="preview-image"/>
                 </div>
                 <input type="file" id="albumCover" accept=".jpg, .png" (change)="onAlbumCoverSelected($event)">
@@ -25,14 +25,15 @@
                 <input type="text" id="albumTitle" [(ngModel)]="albumTitle" placeholder="Add meg az album címét">
             </div>
         </div>
+
         <div class="inputs-container">
             <div class="inputs">
-                <div ngFor="let fileInput of fileInputs; let i = index" class="input-container">
-                    <!-- <label for="{{fileInputs}}">Szám {{i + 1}}: </label> -->
-                    <input type="file" id="{{fileInputs}}" name="fileUpload[]" (change)="onFileSelected($event)">
-                    <!-- <button ngIf="fileInputs.length > 3" class="del-button" (click)="removeFileInput(i)">x</button> -->
+                <div *ngFor="let fileInput of fileInputs; let i = index" class="input-container">
+                    <label for="fileInput{{i}}">Szám {{i + 1}}: </label>
+                    <input type="file" id="fileInput{{i}}" name="fileUpload[]" (change)="onFileSelected($event, i)">
+                    <button *ngIf="fileInputs.length > 3" class="del-button" (click)="removeFileInput(i)">x</button>
                 </div>
-                <button ngIf="inputCount 15" class="add-button" (click)="addFileInput()">Hozzáadás</button>
+                <button *ngIf="fileInputs.length < 15" class="add-button" (click)="addFileInput()">Hozzáadás</button>
             </div>
             <button class="cart-button" (click)="addToCart()">Kosárba</button>
         </div>

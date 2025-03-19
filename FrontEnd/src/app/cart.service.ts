@@ -7,10 +7,9 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private cart: any[] = [];
   private cartSub = new BehaviorSubject<any[]>([]);
-  userUid = "1"
 
   constructor() {
-    this.loadCart(); // Betöltjük a kosarat a localStorage-ból
+    this.loadCart();
   }
 
   getCart() {
@@ -18,34 +17,49 @@ export class CartService {
   }
 
   addProduct(product: any) {
-    this.cart.push(product);
-    this.saveCart(); // Mentjük a kosarat a localStorage-ba
-    this.cartSub.next(this.cart);
+    const existingProductIndex = this.cart.findIndex(p => p.id === product.id);
+
+    if (existingProductIndex !== -1) {
+      this.cart[existingProductIndex].quantity++; // Ha már létezik a termék, csak a mennyiséget növeljük
+    } else {
+      product.quantity = 1;
+      this.cart.push(product); // Ha új termék, hozzáadjuk
+    }
+
+    this.updateCart(); // Kosár frissítése
   }
 
   deleteProduct(product: any) {
     const productIndex = this.cart.findIndex(p => p.id === product.id);
-
     if (productIndex !== -1) {
-      this.cart.splice(productIndex, 1);
-      this.saveCart(); // Mentjük a kosarat a localStorage-ba
-      this.cartSub.next(this.cart); 
+      if (this.cart[productIndex].quantity > 1) {
+        this.cart[productIndex].quantity--; // Csökkentjük a mennyiséget
+      } else {
+        this.cart.splice(productIndex, 1); // Ha 1 darab van, eltávolítjuk a terméket
+      }
     }
+
+    this.updateCart(); // Kosár frissítése
   }
 
   clearCart() {
     this.cart = [];
-    this.saveCart(); // Kosár ürítése és mentése
-    this.cartSub.next(this.cart);
+    this.updateCart(); // Kosár kiürítése
   }
 
-  private saveCart() {
-    localStorage.setItem('cart', JSON.stringify(this.cart));
+  // Kosár darabszámának kiszámítása
+  getCartItemCount(): number {
+    return this.cart.reduce((total, item) => total + item.quantity, 0); // Összes mennyiség kiszámítása
+  }
+
+  private updateCart() {
+    localStorage.setItem('cart', JSON.stringify(this.cart)); // Frissítjük a localStorage-t
+    this.cartSub.next(this.cart); // Frissítjük az Observable-t
   }
 
   private loadCart() {
     const storedCart = localStorage.getItem('cart');
     this.cart = storedCart ? JSON.parse(storedCart) : [];
-    this.cartSub.next(this.cart); // Frissítjük a BehaviorSubject-et a betöltött kosárral
+    this.cartSub.next(this.cart); // Frissítjük a kosár Observable-jét
   }
 }

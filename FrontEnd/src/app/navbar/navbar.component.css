@@ -1,0 +1,28 @@
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+}
+.flag-icon {
+    width: 20px; /* Igazítsd az ikon méretét igény szerint */
+    margin-bottom: 3px;
+  }
+  button {
+    border: none;         /* Törli a gomb keretét */
+    background: transparent; /* Törli a gomb háttérszínét */
+    padding: 0;            /* Nincs belső margó */
+    cursor: pointer;       /* Mutatja, hogy interaktív */
+  }
+  
+  button:focus {
+    outline: none; /* Nincs fókusz keret */
+  }
+  

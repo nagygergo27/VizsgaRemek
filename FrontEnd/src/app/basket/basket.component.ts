@@ -30,9 +30,23 @@ export class BasketComponent {
 
   // Termék törlése a kosárból
   deleteProduct(productId: number) {
-    this.cart = this.cart.filter(item => item.id !== productId); // Szűrés, hogy eltávolítjuk a megfelelő terméket
-    this.updateLocalStorage(); // Kosár frissítése a localStorage-ban
+    const productIndex = this.cart.findIndex(item => item.id === productId); // Az adott termék keresése a kosárban
+  
+    if (productIndex !== -1) {
+      // Ha több darab van, akkor csak az egyik példányt töröljük
+      if (this.cart[productIndex].quantity > 1) {
+        this.cart[productIndex].quantity--; // Csökkentjük a mennyiséget
+      } else {
+        this.cart.splice(productIndex, 1); // Ha már csak 1 darab van, eltávolítjuk
+      }
+  
+      this.updateLocalStorage(); // Frissítjük a kosár állapotát a localStorage-ban
+    }
   }
+  
+  
+  
+  
 
   // Fizetési mód választó popup megnyitása
   openPaymentPopup() {
@@ -47,7 +61,6 @@ export class BasketComponent {
   // Rendelés megerősítése
   confirmPayment() {
     if (this.paymentMethod) {
-      //megrendeles inditasa UID
       this.paymentPopupVisible = false;  // Fizetési popup bezárása
       this.orderSuccessPopupVisible = true;  // Sikeres rendelés popup megjelenítése
       this.clearCart(); // Kosár kiürítése sikeres rendelés után
