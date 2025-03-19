@@ -1,43 +1,36 @@
-<div class="card" >
-  
+<div class="card">
   <div class="card-body">
-    <h5 class="card-title">Sign In</h5>
+    <h5 class="card-title">{{ 'sign_in' | translate }}</h5>
 
     <div class="form-floating mb-3">
-      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="{{ 'email_placeholder' | translate }}">
+      <label for="floatingInput">{{ 'email_address' | translate }}</label>
     </div>
 
     <div class="input-group mb-3">
-     
       <div class="form-floating">
-        <input [(ngModel)]="password" type="password" (keyup.enter)="signIn()" class="form-control" id="floatingInputGroup1" placeholder="Username">
-        <label for="floatingInputGroup1">Password</label>
+        <input [(ngModel)]="password" type="password" (keyup.enter)="signIn()" class="form-control" id="floatingInputGroup1" placeholder="{{ 'password_placeholder' | translate }}">
+        <label for="floatingInputGroup1">{{ 'password' | translate }}</label>
       </div>
       <span class="eye input-group-text"><i class="bi bi-eye"></i></span>
     </div>
 
-    <button type="button" (click)="forgotPassword()"  class="btn btn-primary">Forgot password</button>
+    <button type="button" (click)="forgotPassword()" class="btn btn-link">{{ 'forgot_password' | translate }}</button>
 
-    
     <div class="form-floating my-3">
-      <button type="button" (click)="signIn()"  class="btn btn-primary">Login</button>
-      <span class="ms-3"> 
-          <!-- <a  class="stretched-link">Forgot password?</a> -->
-      </span>  
-    </div> 
-    <div *ngIf="emailPassError" class="alert alert-danger" role="alert">
-      Sign in error! {{emailPassMessage|json}}
+      <button type="button" (click)="signIn()" class="btn btn-primary">{{ 'login' | translate }}</button>
     </div>
 
+    <div *ngIf="emailPassError" class="alert alert-danger" role="alert">
+      {{ 'sign_in_error' | translate }} {{emailPassMessage | json}}
+    </div>
 
-    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
     <div class="form-floating">
-      <button (click)="googleAuth()" class="btn btn-primary">Contiune with Google</button>
-    </div> 
+      <button (click)="googleAuth()" class="btn btn-danger">{{ 'continue_with_google' | translate }}</button>
+    </div>
+    
     <div class="form-floating">
-      <button routerLink="/register" class="btn btn-primary">Regiszráció</button>
-    </div> 
+      <button routerLink="/register" class="btn btn-link">{{ 'register' | translate }}</button>
+    </div>
   </div>
 </div>
-  

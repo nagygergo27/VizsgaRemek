@@ -1,11 +1,10 @@
-{{products|json}}
-<h1 class="text-center mb-4 mt-5">Bakelit Lemezek</h1>
+<h1 class="text-center mb-4 mt-5">{{ 'vinyl_records' | translate }}</h1>
 
 <!-- Kereső -->
 <div class="container mt-4 mb-4">
   <div class="search-container">
-    <input type="text" (keyup.enter)="searchProducts()" [(ngModel)]="searchQuery" class="searchbar" placeholder="Keresés cím, előadó vagy műfaj alapján..">
-    <button (click)="searchProducts()" class="searchbutton">Keresés</button>
+    <input type="text" (keyup.enter)="searchProducts()" [(ngModel)]="searchQuery" class="searchbar" [placeholder]="'search_placeholder' | translate">
+    <button (click)="searchProducts()" class="searchbutton">{{ 'search_button' | translate }}</button>
   </div>
 </div>
 
@@ -22,22 +21,21 @@
         </div>
         <div class="card-body d-flex flex-column">
           <p class="card-text fw-bold text-dark">{{ product.price }} Ft</p>
-          <button (click)="openPurchaseModal(product)" class="btn-buy">Kosárba</button>
+          <button (click)="openPurchaseModal(product)" class="btn-buy">{{ 'add_to_cart' | translate }}</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
+<!-- Modal -->
 <div *ngIf="showModal" class="modal-backdrop"></div>
 
 <div *ngIf="showModal" class="modal" tabindex="-1" style="display: block;">
   <div class="modal-dialog modal-custom">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Vásárlás megerősítése</h5>
+        <h5 class="modal-title">{{ 'purchase_confirmation' | translate }}</h5>
         <button type="button" class="btn-close" (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
@@ -47,13 +45,13 @@
           <h3 class="modal-price">{{ selectedProduct.price }} Ft</h3>
         </div>
         <div>
-          <h5 class="text-muted">Előadó: {{ selectedProduct.artist }}</h5>
-          <h6 class="text-muted">Műfaj: {{ selectedProduct.genre }}</h6>
+          <h5 class="text-muted">{{ 'artist' | translate }}: {{ selectedProduct.artist }}</h5>
+          <h6 class="text-muted">{{ 'genre' | translate }}: {{ selectedProduct.genre }}</h6>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn-cancel" (click)="closeModal()">Mégsem</button>
-        <button type="button" class="btn-buy" (click)="confirmPurchase()">Megerősítés</button>
+        <button type="button" class="btn-cancel" (click)="closeModal()">{{ 'cancel' | translate }}</button>
+        <button type="button" class="btn-buy" (click)="confirmPurchase()">{{ 'confirm' | translate }}</button>
       </div>
     </div>
   </div>

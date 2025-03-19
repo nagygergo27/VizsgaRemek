@@ -10,24 +10,25 @@
 <body style="background: url('assets/images/MainBackground.png') no-repeat center center fixed; background-size: cover;">
     <main class="main-container">
         <!-- Ha be van jelentkezve, a felhasználó nevét jelenítjük meg -->
-        <h1 *ngIf="!isLoggedIn">Üdvözlünk a Bakelit Webshopban!</h1>
-        <h1 *ngIf="isLoggedIn">Üdvözlünk, {{ userName }}!</h1>
-
-        <p>Fedezd fel a legjobb bakelit lemezeket, és találd meg kedvenc előadóid albumait!</p>
+        <h1 *ngIf="!isLoggedIn">{{ 'welcome_message' | translate }}</h1>
+        <h1 *ngIf="isLoggedIn">{{ 'welcome_back' | translate }}, {{ userName }}!</h1>
         
-        <div class="quote">"A zene az élet üzemanyaga."</div>
-        <div class="quote">"Egy jó lemez többet mond ezer szónál."</div>
-        <div class="quote">"A bakelit örök – hallgasd a múltat, éld meg a jelent."</div>
-
+        <p>{{ 'discover_best_vinyls' | translate }}</p>
+        
+        <div class="quote">{{ 'quote_1' | translate }}</div>
+        <div class="quote">{{ 'quote_2' | translate }}</div>
+        <div class="quote">{{ 'quote_3' | translate }}</div>
+        
         <div class="button-container">
-            <button routerLink="/products" class="btn btn-white">Fedezd fel</button>
-            <button routerLink="/about" class="btn btn-white">Kapcsolat</button>
+            <button routerLink="/products" class="btn btn-white">{{ 'explore' | translate }}</button>
+            <button routerLink="/about" class="btn btn-white">{{ 'contact' | translate }}</button>
         </div>
         <div *ngIf="isAdmin" class="admin-buttons">
-            <button routerLink="/users" class="btn btn-primary">Felhasználók kezelése</button>
-            <button routerLink="/productlist" class="btn btn-secondary">Termékek kezelése</button>
-            <button routerLink="/orders" class="btn btn-success">Rendelések kezelése</button>
-          </div>       
+            <button routerLink="/users" class="btn btn-primary">{{ 'manage_users' | translate }}</button>
+            <button routerLink="/productlist" class="btn btn-secondary">{{ 'manage_products' | translate }}</button>
+            <button routerLink="/orders" class="btn btn-success">{{ 'manage_orders' | translate }}</button>
+        </div>
+        
     </main>
 
     <script src="script.ts"></script>

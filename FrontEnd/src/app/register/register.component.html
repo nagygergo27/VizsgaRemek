@@ -1,31 +1,32 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
   <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
-    <h2 class="text-center mb-4">Regisztráció</h2>
+    <h2 class="text-center mb-4">{{ 'title' | translate }}</h2>
+    
     <form (ngSubmit)="register()">
       <div class="mb-3">
-        <label for="name" class="form-label">Név:</label>
+        <label for="name" class="form-label">{{ 'name' | translate }}</label>
         <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Email:</label>
+        <label for="email" class="form-label">{{ 'email' | translate }}</label>
         <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
       </div>
 
       <div class="mb-3">
-        <label for="password" class="form-label">Jelszó:</label>
+        <label for="password" class="form-label">{{ 'password' | translate }}</label>
         <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
       </div>
 
       <div class="mb-3">
-        <label for="passwordConfirm" class="form-label">Jelszó megerősítése:</label>
+        <label for="passwordConfirm" class="form-label">{{ 'passwordConfirm' | translate }}</label>
         <input type="password" class="form-control" id="passwordConfirm" [(ngModel)]="passwordConfirm" name="passwordConfirm" required>
       </div>
 
-      <button type="submit" class="btn btn-outline-success">Regisztráció</button>
+      <button type="submit" class="btn btn-outline-success">{{ 'submit' | translate }}</button>
     </form>
     <div class="text-center mt-3">
-      <a routerLink="/" class="btn btn-outline-secondary">Vissza a főoldalra</a>
+      <a routerLink="/" class="btn btn-outline-secondary">{{ 'back' | translate }}</a>
     </div>
   </div>
 </div>
