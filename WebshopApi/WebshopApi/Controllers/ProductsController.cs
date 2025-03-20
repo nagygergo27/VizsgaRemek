@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebshopApi.Data;
-using WebshopApi.Model;
+using WebshopApi.Models;
 
 namespace WebshopApi.Controllers
 {

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 
@@ -11,7 +10,8 @@ import { ProductService } from '../product.service';
 export class ProductListComponent implements OnInit {
   products: any = [];
   filteredProducts: any[] = [];
-  newProduct:any = { };
+  newProduct:any = {  
+  };
 
   constructor(private productService: ProductService, private router: Router) {}
 

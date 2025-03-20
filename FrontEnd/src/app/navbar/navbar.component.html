@@ -29,6 +29,9 @@
         </button>
         <button routerLink="/basket" class="btn btn-outline-light" type="button" id="userMenu">
           <i class='bx bx-basket'></i>
+          <span *ngIf="itemCount > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{ itemCount }}
+          </span>
         </button>        
         <div class="dropdown">
           <button class="btn btn-outline-light" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">

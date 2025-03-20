@@ -1,4 +1,4 @@
-﻿namespace WebshopApi.Model
+﻿namespace WebshopApi.Models
 {
     public class Product
     {

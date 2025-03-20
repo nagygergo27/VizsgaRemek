@@ -227,7 +227,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebshopApi.Model.Product, WebshopApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebshopApi.Models.Product, WebshopApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -247,13 +247,13 @@
     "Parameters": [
       {
         "Name": "product",
-        "Type": "WebshopApi.Model.Product",
+        "Type": "WebshopApi.Models.Product",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebshopApi.Model.Product",
+        "Type": "WebshopApi.Models.Product",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -279,7 +279,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebshopApi.Model.Product",
+        "Type": "WebshopApi.Models.Product",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -304,7 +304,7 @@
       },
       {
         "Name": "product",
-        "Type": "WebshopApi.Model.Product",
+        "Type": "WebshopApi.Models.Product",
         "IsRequired": true
       }
     ],

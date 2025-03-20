@@ -6,6 +6,6 @@
         public int UId { get; set; }
         public DateTime Date { get; set; }
         //public int Amount { get; set; }
-        public ICollection<Item>? Items { get; set; }=new List<Item>();
+        public ICollection<Item>? Items { get; set; } = new List<Item>();
     }
 }

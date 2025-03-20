@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebshopApi.Migrations
 {
     /// <inheritdoc />
-    public partial class initiamigration : Migration
+    public partial class InitiamMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -25,7 +25,7 @@ namespace WebshopApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrder()
         {
-            return await _context.Order.ToListAsync();
+            return await _context.Order.Include(x => x.Items).ToListAsync();
         }
 
         // GET: api/Orders/5
