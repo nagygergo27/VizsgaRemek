@@ -21,7 +21,6 @@ import { AboutComponent } from './about/about.component';
 import { BasketComponent } from './basket/basket.component';
 import { UsComponent } from './us/us.component';
 
-import { environments } from '../environments/environments';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 
@@ -29,6 +28,10 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+
+import { OrdersComponent } from './orders/orders.component';
+import { environments } from '../environments/environments';
+import { ProductListComponent } from './productlist/productlist.component';
 
 // Factory függvény a loader konfigurálásához
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,7 +53,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductsComponent,
     HomeComponent,
     UsComponent,
-    UsersComponent
+    UsersComponent,
+    OrdersComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

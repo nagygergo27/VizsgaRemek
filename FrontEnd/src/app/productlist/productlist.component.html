@@ -75,10 +75,10 @@
         <tbody>
             <tr *ngFor="let product of filteredProducts; let i = index">
                 <td>{{ i + 1 }}</td>
-                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  ></td>
-                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  ></td>
-                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ></td>
-                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.title" ></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.artist" ></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.genre" ></td>
+                <td><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="product.price" ></td>
                 <td>
                     <button type="button" class="btn btn-warning" (click)="editProduct(product)">Szerkesztés</button>
                     <button type="button" class="btn btn-danger" (click)="deleteProduct(product)">Törlés</button>
@@ -89,4 +89,3 @@
 </div>
 
 <!-- [(ngModel)]="product.price" -->
- 
