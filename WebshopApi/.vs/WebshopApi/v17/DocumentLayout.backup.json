@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\diak\\vizsgaremek\\webshopapi\\webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\diak\\vizsgaremek\\webshopapi\\webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\webshopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\diak\\vizsgaremek\\webshopapi\\webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\diak\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250318150312_initiammigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250318150312_initiammigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Program.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Program.cs",
@@ -59,8 +59,7 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T12:03:40.76Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -76,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ProductsController.cs",
@@ -88,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\OrdersController.cs",
@@ -100,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ItemsController.cs",
@@ -112,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Product.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Product.cs",
@@ -120,11 +119,12 @@
               "RelativeToolTip": "WebshopApi\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T14:58:50.624Z"
+              "WhenOpened": "2025-03-18T14:58:50.624Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Order.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Order.cs",
@@ -136,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Item.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Item.cs",
@@ -148,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "WebshopApi.csproj",
               "DocumentMoniker": "C:\\Users\\Diak\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
               "RelativeDocumentMoniker": "WebshopApi\\WebshopApi.csproj",

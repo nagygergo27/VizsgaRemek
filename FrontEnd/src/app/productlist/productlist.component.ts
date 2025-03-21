@@ -10,8 +10,7 @@ import { ProductService } from '../product.service';
 export class ProductListComponent implements OnInit {
   products: any = [];
   filteredProducts: any[] = [];
-  newProduct:any = {  
-  };
+  newProduct:any = {};
 
   constructor(private productService: ProductService, private router: Router) {}
 
@@ -42,22 +41,22 @@ export class ProductListComponent implements OnInit {
     //   return;
     // }
 
-    this.newProduct={
-      
-        "title": "Ervin",
-        "artist": "string",
-        "price": 0,
-        "genre": "string",
-        "imageUrl": "string"
-      
-    }
+//  this.newProduct = {
+//   title:"ervin",
+//   artist:"ervin",
+//   genre:"ervin",
+//   price:"234",
+//   imageUrl:"www"
+//  }
     
     
 
     this.productService.addProduct(this.newProduct).subscribe({
       next:() => {
+
         this.loadProducts(); 
-        this.newProduct = { name: '', price: 0, description: '' }; 
+        // this.newProduct = { }; 
+
       },
       error:(err) => {
         console.error('Hiba történt a termék hozzáadásakor:', err);
