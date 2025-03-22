@@ -6,7 +6,7 @@
       <h3>{{ cartItem.title }}</h3>
       <p class="artist">{{ 'artist_label' | translate }}: {{ cartItem.artist }}</p>
       <p class="price">{{ 'price_label' | translate }}: {{ cartItem.price }}</p>
-    </div>
+      <p class="quantity"> {{ 'quantity_label' }}: {{ cartItem.quantity }}</p>
     <button (click)="deleteProduct(cartItem.id)" class="delete-btn">{{ 'delete_button' | translate }}</button>
   </div>
   <button type="button" class="pay-btn" (click)="openPaymentPopup()">{{ 'pay_button' | translate }}</button>

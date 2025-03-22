@@ -1,28 +1,33 @@
-.dropdown-menu {
-    opacity: 0;
-    transform: translateY(-10px);
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+button {
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  outline: none;
 }
 
-.dropdown-menu.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
-}
+
 .flag-icon {
-    width: 20px; /* Igazítsd az ikon méretét igény szerint */
+    width: 20px;
     margin-bottom: 3px;
-  }
-  button {
-    border: none;         /* Törli a gomb keretét */
-    background: transparent; /* Törli a gomb háttérszínét */
-    padding: 0;            /* Nincs belső margó */
-    cursor: pointer;       /* Mutatja, hogy interaktív */
-  }
+}
+
+.languagebtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
   
-  button:focus {
-    outline: none; /* Nincs fókusz keret */
-  }
+.languagebtn:hover {
+    transform: scale(1.1);
+}
   
+.languagebtn.active {
+    transform: scale(1.1);
+}

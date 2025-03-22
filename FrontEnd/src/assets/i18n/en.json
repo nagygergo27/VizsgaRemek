@@ -1,7 +1,7 @@
 {
     "bakelit_webshop": "Vinyl Shop",
     "products": "Products",
-    "new_arrivals": "New Arrivals",
+    "custom": "Custom",
     "contact": "Contact",
     "about_faq": "About & FAQ",
     "login": "Login",
@@ -55,6 +55,7 @@
   "basket_title": "Products in the Cart",
   "artist_label": "Artist",
   "price_label": "Price",
+  "quantity_label": "Quantity",
   "delete_button": "Delete",
   "pay_button": "Pay",
   "choose_payment_method": "Choose payment method:",

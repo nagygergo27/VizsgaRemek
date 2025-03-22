@@ -31,7 +31,7 @@
       </div>
       <div class="tab-pane fade" id="account" role="tabpanel">
         <p>Email: </p>
-        <button class="btn btn-primary">Jelszó megváltoztatása</button>
+        <button class="btn btn-primary" (click)="changePassword()" id="changePassword">Jelszó megváltoztatása</button>
       </div>
       <div class="tab-pane fade" id="billing" role="tabpanel">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#billingModal">Számlázási információk módosítása</button>
@@ -42,7 +42,6 @@
     </div>
   </div>
 
-  <!-- Számlázási Információk Modal -->
   <div class="modal fade" id="billingModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -51,74 +50,37 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form id="billingForm">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Vezetéknév *</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" id="lastName" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label">Keresztnév *</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" id="firstName" required>
               </div>
               <div class="col-12">
                 <label class="form-label">Utca és házszám *</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" id="address" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label">Irányítószám *</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" id="zipCode" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label">Telefonszám *</label>
-                <input type="tel" class="form-control" required>
+                <input type="tel" class="form-control" id="phone" required>
               </div>
               <div class="col-12">
                 <label class="form-label">Email *</label>
-                <input type="email" class="form-control" required>
+                <input type="email" class="form-control" id="email" required>
               </div>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Mentés</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bankkártya Modal -->
-  <div class="modal fade" id="cardModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-success text-white">
-          <h5 class="modal-title">Bankkártya hozzáadása</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Vezetéknév</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Keresztnév</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-12">
-                <label class="form-label">Bankkártyaszám</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-3">
-                <label class="form-label">CVC kód</label>
-                <input type="text" class="form-control" maxlength="3" pattern="\d{3}" required>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Mentés</button>
+          <button type="button" class="btn btn-primary" (click)="saveBillingInfo()" id="saveBilling">Mentés</button>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 {
     "bakelit_webshop": "Bakelit Webshop",
     "products": "Termékek",
-    "new_arrivals": "Újdonságok",
+    "custom": "Egyedi",
     "contact": "Kapcsolat",
     "about_faq": "Rólunk & FAQ",
     "login": "Bejelentkezés",
@@ -55,6 +55,7 @@
     "basket_title": "Termékek a kosárban",
     "artist_label": "Művész",
     "price_label": "Ár",
+    "quantity_label": "Mennyiség",
     "delete_button": "Törlés",
     "pay_button": "Fizetés",
     "choose_payment_method": "Válasszon fizetési módot:",
