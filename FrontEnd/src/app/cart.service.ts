@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,9 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private cart: any[] = [];
   private cartSub = new BehaviorSubject<any[]>([]);
+  private apiUrl = 'https://localhost:7025/api/Orders';
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.loadCart();
   }
 
@@ -20,46 +22,49 @@ export class CartService {
     const existingProductIndex = this.cart.findIndex(p => p.id === product.id);
 
     if (existingProductIndex !== -1) {
-      this.cart[existingProductIndex].quantity++; // Ha már létezik a termék, csak a mennyiséget növeljük
+      this.cart[existingProductIndex].quantity++;
     } else {
       product.quantity = 1;
-      this.cart.push(product); // Ha új termék, hozzáadjuk
+      this.cart.push(product);
     }
 
-    this.updateCart(); // Kosár frissítése
+    this.updateCart();
   }
 
   deleteProduct(product: any) {
     const productIndex = this.cart.findIndex(p => p.id === product.id);
     if (productIndex !== -1) {
       if (this.cart[productIndex].quantity > 1) {
-        this.cart[productIndex].quantity--; // Csökkentjük a mennyiséget
+        this.cart[productIndex].quantity--; 
       } else {
-        this.cart.splice(productIndex, 1); // Ha 1 darab van, eltávolítjuk a terméket
+        this.cart.splice(productIndex, 1);
       }
     }
 
-    this.updateCart(); // Kosár frissítése
+    this.updateCart();
   }
 
   clearCart() {
     this.cart = [];
-    this.updateCart(); // Kosár kiürítése
+    this.updateCart(); 
   }
 
-  // Kosár darabszámának kiszámítása
   getCartItemCount(): number {
-    return this.cart.reduce((total, item) => total + item.quantity, 0); // Összes mennyiség kiszámítása
+    return this.cart.reduce((total, item) => total + item.quantity, 0);
   }
 
   private updateCart() {
-    localStorage.setItem('cart', JSON.stringify(this.cart)); // Frissítjük a localStorage-t
-    this.cartSub.next(this.cart); // Frissítjük az Observable-t
+    localStorage.setItem('cart', JSON.stringify(this.cart)); 
+    this.cartSub.next(this.cart); 
   }
 
   private loadCart() {
     const storedCart = localStorage.getItem('cart');
     this.cart = storedCart ? JSON.parse(storedCart) : [];
-    this.cartSub.next(this.cart); // Frissítjük a kosár Observable-jét
+    this.cartSub.next(this.cart);
+  }
+
+  placeOrder(orderData: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, orderData);
   }
 }

@@ -77,7 +77,7 @@ export class BasketComponent {
     if (this.paymentMethod) {
       this.paymentPopupVisible = false;
       this.orderSuccessPopupVisible = true;
-      this.clearCart();
+      
     } else {
       alert('Kérem válassza ki a fizetési módot!');
     }
@@ -90,5 +90,31 @@ export class BasketComponent {
 
   closeSuccessPopup() {
     this.orderSuccessPopupVisible = false;
+    console.log("closeSuccess");
+  
+    // Rendelés mentése
+    const orderData = {
+      uId: '222',
+      date: new Date().toISOString(),
+      items: this.cart.map(item => ({
+        productId: item.id,
+        quantity: 1,
+        price: item.price,
+      })),
+    };
+    console.log("orderdata",orderData);
+  
+    console.log("Cart", this.cart);
+  
+    this.cartService.placeOrder(orderData).subscribe(
+      {
+        next:(response:any) => {
+          console.log('Rendelés sikeresen mentve:', response);
+          this.orderSuccessPopupVisible = false;
+          this.clearCart()},
+        error:(error:any)=> {
+          console.error('Hiba történt a rendelés mentésekor:', error);
+        }
+      })
+   }
   }
-}

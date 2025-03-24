@@ -29,9 +29,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
-import { OrdersComponent } from './orders/orders.component';
+
 import { environments } from '../environments/environments';
 import { ProductListComponent } from './productlist/productlist.component';
+import { OrdersComponent } from './orders/orders.component';
 
 // Factory függvény a loader konfigurálásához
 export function HttpLoaderFactory(http: HttpClient) {
@@ -54,8 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     UsComponent,
     UsersComponent,
-    OrdersComponent,
-    ProductListComponent
+    ProductListComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

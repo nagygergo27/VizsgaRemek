@@ -88,7 +88,7 @@ namespace WebshopApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
-            var order = await _context.Order.FindAsync(id);
+            var order = await _context.Order.Where(x=>x.Id==id).Include(x=>x.Items).FirstOrDefaultAsync();
             if (order == null)
             {
                 return NotFound();

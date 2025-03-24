@@ -1,1 +1,27 @@
-<p>orders works!</p>
+<h2>Rendelések</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Felhasználó</th>
+      <th>Dátum</th>
+      <th>Tételek</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.UId }}</td>
+      <td>{{ order.date }}</td>
+      <td>
+        <div *ngFor="let item of order.items">
+            <span>{{item.productId}};</span>
+            <span >{{item.piece}};</span>
+            <span>{{item.price}} Ft</span>
+
+
+        </div>
+      </td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteOrder(order.id)">Törlés</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
