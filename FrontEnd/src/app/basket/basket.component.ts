@@ -10,9 +10,15 @@ import { CartService } from '../cart.service';
 export class BasketComponent {
   cart: any[] = [];
   itemCount: number = 0;
-  paymentPopupVisible: boolean = false; 
+  paymentPopupVisible: boolean = false;
+  paymentDetailsPopupVisible: boolean = false;
   orderSuccessPopupVisible: boolean = false;
   paymentMethod: string = '';
+  deliveryMethod: string = '';
+  cardNumber: string = '';
+  cardExpiry: string = '';
+  cardCVC: string = '';
+  shippingAddress: string = '';
 
   constructor(private cartService: CartService) {
     this.loadCart();
@@ -28,39 +34,19 @@ export class BasketComponent {
     localStorage.setItem('cart', JSON.stringify(this.cart));
     this.updateItemCount();
   }
+  
   updateItemCount() {
     this.itemCount = this.cart.reduce((total, item) => total + item.quantity, 0);
   }
 
   deleteProduct(productId: number) {
     const productIndex = this.cart.findIndex(item => item.id === productId);
-  
     if (productIndex !== -1) {
       if (this.cart[productIndex].quantity > 1) {
         this.cart[productIndex].quantity--;
       } else {
         this.cart.splice(productIndex, 1);
       }
-  
-      this.updateLocalStorage();
-    }
-  }
-  
-  
-  decreaseQuantity(productId: number) {
-    const productIndex = this.cart.findIndex(item => item.id === productId);
-    
-    if (productIndex !== -1 && this.cart[productIndex].quantity > 1) {
-      this.cart[productIndex].quantity--;
-      this.updateLocalStorage(); 
-    }
-  }
-  
-  increaseQuantity(productId: number) {
-    const productIndex = this.cart.findIndex(item => item.id === productId);
-    
-    if (productIndex !== -1) {
-      this.cart[productIndex].quantity++;
       this.updateLocalStorage();
     }
   }
@@ -73,13 +59,25 @@ export class BasketComponent {
     this.paymentPopupVisible = false;
   }
 
-  confirmPayment() {
-    if (this.paymentMethod) {
+  proceedToPayment() {
+    if (this.deliveryMethod) {
       this.paymentPopupVisible = false;
-      this.orderSuccessPopupVisible = true;
-      
+      this.paymentDetailsPopupVisible = true;
     } else {
-      alert('Kérem válassza ki a fizetési módot!');
+      alert('Kérem válassza ki a szállítási módot!');
+    }
+  }
+
+  closePaymentDetailsPopup() {
+    this.paymentDetailsPopupVisible = false;
+  }
+
+  confirmPayment() {
+    if (this.cardNumber && this.cardExpiry && this.cardCVC && (this.deliveryMethod !== 'home' || this.shippingAddress)) {
+      this.paymentDetailsPopupVisible = false;
+      this.orderSuccessPopupVisible = true;
+    } else {
+      alert('Kérjük, töltsön ki minden mezőt megfelelően!');
     }
   }
 
@@ -91,8 +89,7 @@ export class BasketComponent {
   closeSuccessPopup() {
     this.orderSuccessPopupVisible = false;
     console.log("closeSuccess");
-  
-    // Rendelés mentése
+    
     const orderData = {
       uId: '222',
       date: new Date().toISOString(),
@@ -101,20 +98,24 @@ export class BasketComponent {
         quantity: 1,
         price: item.price,
       })),
+      paymentMethod: this.paymentMethod,
+      deliveryMethod: this.deliveryMethod,
+      shippingAddress: this.shippingAddress || null
     };
-    console.log("orderdata",orderData);
-  
+    console.log("orderdata", orderData);
     console.log("Cart", this.cart);
-  
+
     this.cartService.placeOrder(orderData).subscribe(
       {
-        next:(response:any) => {
+        next: (response: any) => {
           console.log('Rendelés sikeresen mentve:', response);
           this.orderSuccessPopupVisible = false;
-          this.clearCart()},
-        error:(error:any)=> {
+          this.clearCart()
+        },
+        error: (error: any) => {
           console.error('Hiba történt a rendelés mentésekor:', error);
         }
-      })
-   }
+      }
+    )
   }
+}

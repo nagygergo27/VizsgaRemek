@@ -9,19 +9,43 @@
       <p class="quantity"> {{ 'quantity_label' | translate }}: {{ cartItem.quantity }}</p>
     <button (click)="deleteProduct(cartItem.id)" class="delete-btn">{{ 'delete_button' | translate }}</button>
   </div>
-  <button type="button" class="pay-btn" (click)="openPaymentPopup()">{{ 'pay_button' | translate }}</button>
 </div>
+<button type="button" class="pay-btn" (click)="openPaymentPopup()">{{ 'pay_button' | translate }}</button>
 
 <div *ngIf="paymentPopupVisible" class="popup-overlay" (click)="closePaymentPopup()">
   <div class="payment-popup" (click)="$event.stopPropagation()">
-    <h3>{{ 'choose_payment_method' | translate }}</h3>
+    <h3>{{ 'choose_delivery_option' | translate }}</h3>
     <label>
-      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="cash" /> {{ 'cash_payment' | translate }}
+      <input type="radio" name="deliveryMethod" [(ngModel)]="deliveryMethod" value="home" /> {{ 'home_delivery' | translate }}
     </label>
     <label>
-      <input type="radio" name="paymentMethod" [(ngModel)]="paymentMethod" value="card" /> {{ 'card_payment' | translate }}
+      <input type="radio" name="deliveryMethod" [(ngModel)]="deliveryMethod" value="store" /> {{ 'store_pickup' | translate }}
     </label>
-    <button (click)="confirmPayment()" class="confirm-btn">{{ 'confirm_payment_button' | translate }}</button>
+    <button (click)="proceedToPayment()" class="confirm-btn" [disabled]="!deliveryMethod">{{ 'continue_button' | translate }}</button>
+  </div>
+</div>
+
+<div *ngIf="paymentDetailsPopupVisible" class="popup-overlay" (click)="closePaymentDetailsPopup()">
+  <div class="payment-popup" (click)="$event.stopPropagation()">
+    <h3>{{ 'enter_payment_details' | translate }}</h3>
+    <label>
+      <input type="text" [(ngModel)]="cardNumber" placeholder="{{ 'card_number' | translate }}" required />
+    </label>
+    <label>
+      <input type="text" [(ngModel)]="cardExpiry" placeholder="{{ 'card_expiry' | translate }}" required />
+    </label>
+    <label>
+      <input type="text" [(ngModel)]="cardCVC" placeholder="{{ 'card_cvc' | translate }}" required />
+    </label>
+    <div *ngIf="deliveryMethod === 'home'">
+      <label>
+        <input type="text" [(ngModel)]="shippingAddress" placeholder="{{ 'shipping_address' | translate }}" required />
+      </label>
+    </div>
+    <button (click)="confirmPayment()" class="confirm-btn" 
+            [disabled]="!cardNumber || !cardExpiry || !cardCVC || (deliveryMethod === 'home' && !shippingAddress)">
+      {{ 'confirm_payment_button' | translate }}
+    </button>
   </div>
 </div>
 

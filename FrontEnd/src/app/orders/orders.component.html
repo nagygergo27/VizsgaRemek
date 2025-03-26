@@ -9,11 +9,11 @@
   <tbody>
     <tr *ngFor="let order of orders">
       <td>{{ order.UId }}</td>
-      <td>{{ order.date }}</td>
+      <td>{{ order.date | date: 'yyyy-MM-dd HH:mm' }}</td>
       <td>
         <div *ngFor="let item of order.items">
-            <span>{{item.productId}};</span>
-            <span >{{item.piece}};</span>
+            <span>ID: {{item.productId}}, </span>
+            <span >{{item.piece}} Darab, </span>
             <span>{{item.price}} Ft</span>
 
 
