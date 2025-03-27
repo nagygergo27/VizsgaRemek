@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'; 
 import { CartService } from '../cart.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-basket',
@@ -19,9 +20,13 @@ export class BasketComponent {
   cardExpiry: string = '';
   cardCVC: string = '';
   shippingAddress: string = '';
+  user:any
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService, private auth:AuthService) {
     this.loadCart();
+    this.auth.getLoggedUser().subscribe(
+      (user)=>this.user=user
+    )
   }
 
   loadCart() {
@@ -88,10 +93,10 @@ export class BasketComponent {
 
   closeSuccessPopup() {
     this.orderSuccessPopupVisible = false;
-    console.log("closeSuccess");
+    console.log("closeSuccess", this.user);
     
     const orderData = {
-      uId: '222',
+      uId: this.user.uid,     
       date: new Date().toISOString(),
       items: this.cart.map(item => ({
         productId: item.id,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../orders.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-orders',
@@ -9,7 +10,32 @@ import { OrdersService } from '../orders.service';
 export class OrdersComponent implements OnInit {
   orders: any[] = [];
 
-  constructor(private ordersService: OrdersService) {}
+   loggedUser:any
+    users:any
+
+    constructor( private auth:AuthService, private ordersService:OrdersService ){
+      this.auth.getLoggedUser().subscribe(
+        (loggedUser)=>{
+          this.loggedUser=loggedUser
+          console.log("Users logged23:::", this.loggedUser)
+          if (this.loggedUser){ 
+            console.log("Lekérjük a usereket!!!!")
+            this.auth.getUsers()?.subscribe(
+            (users)=>this.users=users
+          )
+          
+        }
+      }
+  
+      )
+    }
+
+
+    searchUser(uid:any){
+      if (this.users)
+        return (this.users.filter((e:any)=>e.uid==uid)[0].displayName);
+      else return "";
+    }
 
   ngOnInit(): void {
     this.loadOrders();

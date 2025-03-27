@@ -1,56 +1,60 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\suli\\VizsgaRemek\\WebshopApi\\",
+  "WorkspaceRootPath": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250324134713_uuu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250324134713_uuu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250327123346_Uid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebshopApi\\Migrations\\20250327123346_Uid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250324134713_uuu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250324134713_uuu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Diak\\Downloads\\uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\webshopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\webshopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\webshopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250318150312_initiammigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250318150312_initiammigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250318150312_initiammigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|d:\\suli\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250324134500_uuu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|c:\\users\\tanar\\vizsgaremek\\webshopapi\\webshopapi\\migrations\\20250324134500_uuu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5056840-3CDF-44FB-9DB1-86A99108E2E2}|WebshopApi\\WebshopApi.csproj|solutionrelative:webshopapi\\migrations\\20250324134500_uuu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -61,15 +65,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Program.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Program.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Program.cs",
               "RelativeToolTip": "WebshopApi\\Program.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAQwBQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,11 +82,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "20250327123346_Uid.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250327123346_Uid.cs",
+              "RelativeDocumentMoniker": "WebshopApi\\Migrations\\20250327123346_Uid.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250327123346_Uid.cs",
+              "RelativeToolTip": "WebshopApi\\Migrations\\20250327123346_Uid.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:33:46.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\appsettings.json",
               "RelativeDocumentMoniker": "WebshopApi\\appsettings.json",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\appsettings.json",
               "RelativeToolTip": "WebshopApi\\appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -90,24 +107,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "20250324134713_uuu2.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134713_uuu2.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134713_uuu2.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Migrations\\20250324134713_uuu2.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134713_uuu2.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134713_uuu2.cs",
               "RelativeToolTip": "WebshopApi\\Migrations\\20250324134713_uuu2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T13:47:13.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20250324134500_uuu.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134500_uuu.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134500_uuu.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Migrations\\20250324134500_uuu.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134500_uuu.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250324134500_uuu.cs",
               "RelativeToolTip": "WebshopApi\\Migrations\\20250324134500_uuu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -115,11 +132,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "20250318150312_InitiamMigration.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
               "RelativeToolTip": "WebshopApi\\Migrations\\20250318150312_InitiamMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -127,11 +144,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "WebshopApi\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -139,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "OrdersController.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\OrdersController.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "WebshopApi\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,33 +168,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Order.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Order.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Order.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Order.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Order.cs",
               "RelativeToolTip": "WebshopApi\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T14:58:21.442Z"
+              "WhenOpened": "2025-03-18T14:58:21.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json",
               "DocumentMoniker": "C:\\Users\\Diak\\Downloads\\uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json",
+              "RelativeDocumentMoniker": "..\\..\\..\\Diak\\Downloads\\uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json",
               "ToolTip": "C:\\Users\\Diak\\Downloads\\uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json",
+              "RelativeToolTip": "..\\..\\..\\Diak\\Downloads\\uservizsgaremek-firebase-adminsdk-fbsvc-227ee2b21e (2).json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-21T13:22:31.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ItemsController.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Controllers\\ItemsController.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Controllers\\ItemsController.cs",
               "RelativeToolTip": "WebshopApi\\Controllers\\ItemsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -185,35 +205,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Product.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Product.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Product.cs",
               "RelativeToolTip": "WebshopApi\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T14:58:50.624Z"
+              "WhenOpened": "2025-03-18T14:58:50.624Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Item.cs",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Item.cs",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Item.cs",
               "RelativeDocumentMoniker": "WebshopApi\\Models\\Item.cs",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\Models\\Item.cs",
               "RelativeToolTip": "WebshopApi\\Models\\Item.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T14:57:51.288Z"
+              "WhenOpened": "2025-03-18T14:57:51.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "WebshopApi.csproj",
-              "DocumentMoniker": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
+              "DocumentMoniker": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
               "RelativeDocumentMoniker": "WebshopApi\\WebshopApi.csproj",
-              "ToolTip": "D:\\suli\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
+              "ToolTip": "C:\\Users\\Tanar\\VizsgaRemek\\WebshopApi\\WebshopApi\\WebshopApi.csproj",
               "RelativeToolTip": "WebshopApi\\WebshopApi.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
