@@ -1,36 +1,39 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{ 'sign_in' | translate }}</h5>
-
-    <div class="form-floating mb-3">
-      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="{{ 'email_placeholder' | translate }}">
-      <label for="floatingInput">{{ 'email_address' | translate }}</label>
-    </div>
-
-    <div class="input-group mb-3">
-      <div class="form-floating">
-        <input [(ngModel)]="password" type="password" (keyup.enter)="signIn()" class="form-control" id="floatingInputGroup1" placeholder="{{ 'password_placeholder' | translate }}">
-        <label for="floatingInputGroup1">{{ 'password' | translate }}</label>
+<body>
+  <div class="d-flex justify-content-center align-items-center min-vh-100 bg-gradient">
+    <div class="card shadow-lg border-0 rounded-lg w-100" style="max-width: 400px;">
+      <div class="card-body p-5">
+        <h5 class="card-title text-center mb-4">{{ 'sign_in' | translate }}</h5>
+  
+        <div class="form-floating mb-3">
+          <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="{{ 'email_placeholder' | translate }}">
+          <label for="floatingInput">{{ 'email_address' | translate }}</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input [(ngModel)]="password" type="password" (keyup.enter)="signIn()" class="form-control" id="floatingInputGroup1" placeholder="{{ 'password_placeholder' | translate }}">
+          <label for="floatingInputGroup1">{{ 'password' | translate }}</label>
+        </div>
+  
+        <div class="mb-3">
+          <button type="button" (click)="forgotPassword()" class="btn btn-link">{{ 'forgot_password' | translate }}</button>
+        </div>
+  
+        <div class="d-grid gap-2 mb-3">
+          <button type="button" (click)="signIn()" class="btn btn-primary btn-lg">{{ 'login' | translate }}</button>
+        </div>
+  
+        <div *ngIf="emailPassError" class="alert alert-danger text-center" role="alert">
+          {{ 'sign_in_error' | translate }} {{ emailPassMessage | json }}
+        </div>
+  
+        <div class="d-grid gap-2 mb-3">
+          <button (click)="googleAuth()" class="btn btn-danger btn-lg">{{ 'continue_with_google' | translate }}</button>
+        </div>
+  
+        <div class="text-center">
+          <button routerLink="/register" class="btn btn-link">{{ 'register' | translate }}</button>
+        </div>
       </div>
-      <span class="eye input-group-text"><i class="bi bi-eye"></i></span>
-    </div>
-
-    <button type="button" (click)="forgotPassword()" class="btn btn-link">{{ 'forgot_password' | translate }}</button>
-
-    <div class="form-floating my-3">
-      <button type="button" (click)="signIn()" class="btn btn-primary">{{ 'login' | translate }}</button>
-    </div>
-
-    <div *ngIf="emailPassError" class="alert alert-danger" role="alert">
-      {{ 'sign_in_error' | translate }} {{emailPassMessage | json}}
-    </div>
-
-    <div class="form-floating">
-      <button (click)="googleAuth()" class="btn btn-danger">{{ 'continue_with_google' | translate }}</button>
-    </div>
-    
-    <div class="form-floating">
-      <button routerLink="/register" class="btn btn-link">{{ 'register' | translate }}</button>
     </div>
   </div>
-</div>
+</body>

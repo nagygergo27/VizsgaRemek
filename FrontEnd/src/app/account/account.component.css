@@ -1,6 +1,5 @@
-/* Általános stílusok */
 body {
-    background-color: #ffffff;
+    background-color: #f7f7f7f7;
     color: #333333;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -61,34 +60,34 @@ button:hover {
     border: transparent;
 }
 
-/* Modal ablakok stílusai */
+
 .modal {
-    background-color: rgba(0, 0, 0, 0.5); /* Félátlátszó háttér */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0;
 }
 
 .modal-dialog {
-    margin: 10% auto; /* Középre igazítás */
+    margin: 10% auto;
     max-width: 500px;
 }
 
 .modal-content {
-    background-color: #ffffff; /* Fehér háttér */
-    color: #333333; /* Sötét szöveg */
+    background-color: #ffffff;
+    color: #333333;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .modal-header {
-    background-color: #f1f1f1; /* Világos szürke háttér */
-    color: #333; /* Sötét szöveg */
-    border-bottom: 1px solid #ddd; /* Finom szürke vonal */
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom: 1px solid #ddd;
 }
 
 .modal-header .btn-close {
     background-color: transparent;
-    color: #333; /* Sötét szín a gombon */
+    color: #333;
     font-size: 1.5rem;
 }
 
@@ -97,8 +96,8 @@ button:hover {
 }
 
 .modal-footer {
-    background-color: #f1f1f1; /* Világos szürke */
-    border-top: 1px solid #ddd; /* Finom szürke vonal */
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
 }
 
 #saveBilling {
@@ -110,7 +109,6 @@ button:hover {
     background-color: #555;
 }
 
-/* További alapértelmezett Bootstrap elemek */
 .navbar, .navbar-nav, .form-control, .form-label, .form-control:focus {
     background-color: transparent !important;
     color: #333 !important;

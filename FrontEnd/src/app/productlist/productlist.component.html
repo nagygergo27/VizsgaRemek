@@ -38,23 +38,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="product-genre" class="form-label">Műfaja</label>
-                        <input [(ngModel)]="newProduct.genre" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="product-genre" placeholder="Adja meg a kép URL-jét">
+                        <input [(ngModel)]="newProduct.genre" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="product-genre" placeholder="Adja meg a műfaját">
                     </div>
-
-                    <!-- <div class="mb-3">
-                        <label for="genre" class="form-label">Műfaja:</label>
-                        <select class="form-select" id="genreFilter">
-                            <option value="">Válassz műfajt</option>
-                            <option value="pop">Pop</option>
-                            <option value="jazz">Jazz</option>
-                            <option value="rock">Rock</option>
-                            <option value="classical">Klasszikus</option>
-                        </select>
-                    </div> -->
+                    
 
                     <div class="mb-3">
                         <label for="product-price" class="form-label">Ára:</label>
-                        <input [(ngModel)]="newProduct.price" [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="product-price" placeholder="Az összeg for">
+                        <input [(ngModel)]="newProduct.price" [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="product-price" placeholder="Az összege">
                     </div>
 
                     <div class="d-flex justify-content-between">
