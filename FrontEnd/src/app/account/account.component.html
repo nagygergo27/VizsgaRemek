@@ -17,73 +17,55 @@
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab">Fiók Adatai</button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button" role="tab">Számlázási Információk</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards" type="button" role="tab">Bankkártyák</button>
-      </li>
     </ul>
 
     <div class="tab-content mt-3">
+      <!-- Megrendelések -->
       <div class="tab-pane fade show active" id="orders" role="tabpanel">
-        <p>Itt lesznek listázva az eddig megrendelt termékek.</p>
-      </div>
-      <div class="tab-pane fade" id="account" role="tabpanel">
-        <p>Email: </p>
-        <button class="btn btn-primary" (click)="changePassword()" id="changePassword">Jelszó megváltoztatása</button>
-      </div>
-      <div class="tab-pane fade" id="billing" role="tabpanel">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#billingModal">Számlázási információk módosítása</button>
-      </div>
-      <div class="tab-pane fade" id="cards" role="tabpanel">
-        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cardModal">Bankkártya hozzáadása</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="billingModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Számlázási Információk</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h5>Megrendeléseid:</h5>
+        
+        <!-- Ha nincs rendelés -->
+        <div *ngIf="orders.length === 0">
+          <p>Nem rendelkeztél még termékkel.</p>
         </div>
-        <div class="modal-body">
-          <form id="billingForm">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Vezetéknév *</label>
-                <input type="text" class="form-control" id="lastName" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Keresztnév *</label>
-                <input type="text" class="form-control" id="firstName" required>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Utca és házszám *</label>
-                <input type="text" class="form-control" id="address" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Irányítószám *</label>
-                <input type="text" class="form-control" id="zipCode" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Telefonszám *</label>
-                <input type="tel" class="form-control" id="phone" required>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Email *</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
+        
+        <!-- Ha van rendelés -->
+        <div *ngIf="orders.length > 0">
+          <div *ngFor="let order of orders" class="order mb-4">
+            <h3>Rendelés ID: {{ order.id }}</h3>
+            <p><strong>Rendelés dátuma:</strong> {{ order.date | date:'shortDate' }}</p>
+            
+            <div class="order-items">
+              <h4>Termékek:</h4>
+              <ul>
+                <li *ngFor="let item of order.items">
+                  <!-- Termék neve -->
+                  <span><strong>Termék:</strong> {{ item.product?.title }}</span><br>
+                  <span><strong>Darabszám:</strong> {{ item.piece }}</span><br>
+                  <span><strong>Ár:</strong> {{ item.price | currency:'HUF' }}</span>
+                </li>
+              </ul>
             </div>
-          </form>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="saveBillingInfo()" id="saveBilling">Mentés</button>
+
+        <!-- Adminok számára: egyéb információk -->
+        <div *ngIf="isAdmin">
+          <p>Admin felhasználóként az összes rendelést látod.</p>
         </div>
+      </div>
+
+      <!-- Fiók Adatai -->
+      <div class="tab-pane fade" id="account" role="tabpanel">
+        <p>Email: <strong>{{ userData.email ? userData.email : 'Nincs bejelentkezve' }}</strong></p>
+        <p>Teljes név: <strong>{{ userData.displayName }}</strong></p>
+        <p>Telefon: <strong>{{ userData.phoneNumber }}</strong></p>
+        <p>Fiók regisztráció dátuma: <strong>{{ userData.creationTime }}</strong></p>
+        <p>Profilkép: <img *ngIf="userData.photoURL" [src]="userData.photoURL" alt="Profilkép" class="img-thumbnail" /></p>
+        <button class="btn btn-primary" (click)="changePassword()" id="changePassword">Jelszó megváltoztatása</button>
       </div>
     </div>
   </div>
 </body>
 </html>
+

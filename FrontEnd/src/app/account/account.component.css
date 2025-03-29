@@ -1,5 +1,5 @@
 body {
-    background-color: #f7f7f7f7;
+    background-color: #f7f7f7;
     color: #333333;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -51,62 +51,14 @@ button {
     padding: 10px 15px;
     color: #fff;
     background-color: #333;
-    border: 1px solid #33333300;
+    border: 1px solid transparent;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
   
 button:hover {
     background-color: #555;
     border: transparent;
-}
-
-
-.modal {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0;
-}
-
-.modal-dialog {
-    margin: 10% auto;
-    max-width: 500px;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    color: #333333;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-    background-color: #f1f1f1;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-}
-
-.modal-header .btn-close {
-    background-color: transparent;
-    color: #333;
-    font-size: 1.5rem;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.modal-footer {
-    background-color: #f1f1f1;
-    border-top: 1px solid #ddd;
-}
-
-#saveBilling {
-    background-color: #333;
-    border-color: #444;
-}
-
-#saveBilling:hover {
-    background-color: #555;
 }
 
 .navbar, .navbar-nav, .form-control, .form-label, .form-control:focus {
@@ -121,22 +73,47 @@ button:hover {
     box-shadow: 0 0 5px rgba(51, 51, 51, 0.2) !important;
 }
 
-.btn, .btn-close {
+.btn {
     color: #fff !important;
     background-color: #333 !important;
     border: 1px solid transparent !important;
+    cursor: pointer;
 }
 
-.btn:hover, .btn-close:hover {
+.btn:hover {
     background-color: #555 !important;
+}
+
+/* Styling for orders */
+.order {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.order h3 {
+    color: #333;
+}
+
+.order-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-items li {
+    margin: 10px 0;
+}
+
+.total-price {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
     .container {
         padding: 0 10px;
-    }
-
-    .modal-dialog {
-        max-width: 90%;
     }
 }

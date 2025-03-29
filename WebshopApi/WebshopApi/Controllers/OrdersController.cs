@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebshopApi.Data;
 using WebshopApi.Models;
@@ -25,14 +20,19 @@ namespace WebshopApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrder()
         {
-            return await _context.Order.Include(x => x.Items).ToListAsync();
+            return await _context.Order.Include(x => x.Items)
+                                       .ThenInclude(i => i.Product)  // Betöltjük a termék adatokat is
+                                       .ToListAsync();
         }
 
         // GET: api/Orders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
-            var order = await _context.Order.FindAsync(id);
+            var order = await _context.Order
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)  // Betöltjük a termék adatokat is
+                .FirstOrDefaultAsync(o => o.Id == id);
 
             if (order == null)
             {
@@ -42,8 +42,25 @@ namespace WebshopApi.Controllers
             return order;
         }
 
+        // GET: api/Orders/user/{userId}
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrdersByUserId(string userId)
+        {
+            var orders = await _context.Order
+                .Where(o => o.UId == userId)  // Feltételezve, hogy a rendelés UId-ja megegyezik a felhasználó azonosítójával
+                .Include(o => o.Items)         // Rendeléshez tartozó tételek betöltése
+                .ThenInclude(i => i.Product)   // Termékek betöltése az egyes tételekhez
+                .ToListAsync();
+
+            if (orders == null || !orders.Any())
+            {
+                return NotFound();  // Ha nincsenek rendelések, 404-es hibát adunk vissza
+            }
+
+            return Ok(orders);  // Ha vannak rendelések, visszaadjuk őket
+        }
+
         // PUT: api/Orders/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Order order)
         {
@@ -74,7 +91,6 @@ namespace WebshopApi.Controllers
         }
 
         // POST: api/Orders
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
@@ -88,7 +104,7 @@ namespace WebshopApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
-            var order = await _context.Order.Where(x=>x.Id==id).Include(x=>x.Items).FirstOrDefaultAsync();
+            var order = await _context.Order.Where(x => x.Id == id).Include(x => x.Items).FirstOrDefaultAsync();
             if (order == null)
             {
                 return NotFound();
@@ -98,6 +114,19 @@ namespace WebshopApi.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        // DELETE: api/Orders/clean-invalid-items
+        [HttpDelete("clean-invalid-items")]
+        public async Task<IActionResult> CleanInvalidItems()
+        {
+            var invalidItems = _context.Item.Where(i => !i.ProductId.HasValue || !_context.Product.Any(p => p.Id == i.ProductId))
+                                            .ToList();
+
+            _context.Item.RemoveRange(invalidItems);
+            await _context.SaveChangesAsync();
+
+            return NoContent(); // Visszaadjuk, hogy sikeresen megtörtént a törlés
         }
 
         private bool OrderExists(int id)

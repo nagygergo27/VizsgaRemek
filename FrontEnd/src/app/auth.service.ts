@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { GoogleAuthProvider } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -171,4 +171,8 @@ export class AuthService {
       () => console.log("mail elküldve!")
     );
   }
-}
+  getUserData(): Observable<any> {
+    return this.afAuth.authState; // Visszaadja az autentikált felhasználót
+  }
+  
+}  
