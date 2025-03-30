@@ -120,13 +120,23 @@ namespace WebshopApi.Controllers
         [HttpDelete("clean-invalid-items")]
         public async Task<IActionResult> CleanInvalidItems()
         {
-            var invalidItems = _context.Item.Where(i => !i.ProductId.HasValue || !_context.Product.Any(p => p.Id == i.ProductId))
-                                            .ToList();
+            // Lekérjük az érvénytelen tételeket, amelyek nem kapcsolódnak létező termékhez
+            var invalidItems = _context.Item
+                .Where(i => !i.ProductId.HasValue || !_context.Product.Any(p => p.Id == i.ProductId))
+                .ToList();
 
+            if (!invalidItems.Any())
+            {
+                // Ha nincsenek érvénytelen tételek
+                return Ok("Nincsenek érvénytelen tételek a rendszerben.");
+            }
+
+            // Töröljük az érvénytelen tételeket
             _context.Item.RemoveRange(invalidItems);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Visszaadjuk, hogy sikeresen megtörtént a törlés
+            // Értesítjük a felhasználót, hogy sikeresen töröltük az érvénytelen tételeket
+            return Ok($"{invalidItems.Count} érvénytelen tétel törlésre került.");
         }
 
         private bool OrderExists(int id)

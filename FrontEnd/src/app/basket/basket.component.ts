@@ -20,13 +20,13 @@ export class BasketComponent {
   cardExpiry: string = '';
   cardCVC: string = '';
   shippingAddress: string = '';
-  user:any
+  user: any;
 
-  constructor(private cartService: CartService, private auth:AuthService) {
+  constructor(private cartService: CartService, private auth: AuthService) {
     this.loadCart();
     this.auth.getLoggedUser().subscribe(
-      (user)=>this.user=user
-    )
+      (user) => this.user = user
+    );
   }
 
   loadCart() {
@@ -93,34 +93,37 @@ export class BasketComponent {
 
   closeSuccessPopup() {
     this.orderSuccessPopupVisible = false;
-    console.log("closeSuccess", this.user);
-    
+
+    if (!this.user || !this.user.uid) {
+      console.error('Hiba: nincs bejelentkezett felhasználó!');
+      return;
+    }
+
     const orderData = {
       uId: this.user.uid,     
       date: new Date().toISOString(),
       items: this.cart.map(item => ({
         productId: item.id,
-        quantity: 1,
+        // quantity: item.quantity > 0 ? item.quantity : 1, 
+        piece: item.piece > 0 ? item.piece : 1,
         price: item.price,
       })),
-      paymentMethod: this.paymentMethod,
-      deliveryMethod: this.deliveryMethod,
-      shippingAddress: this.shippingAddress || null
+      paymentMethod: this.paymentMethod || "card",
+      deliveryMethod: this.deliveryMethod || "store",
+      shippingAddress: this.shippingAddress || ""
     };
-    console.log("orderdata", orderData);
-    console.log("Cart", this.cart);
 
-    this.cartService.placeOrder(orderData).subscribe(
-      {
-        next: (response: any) => {
-          console.log('Rendelés sikeresen mentve:', response);
-          this.orderSuccessPopupVisible = false;
-          this.clearCart()
-        },
-        error: (error: any) => {
-          console.error('Hiba történt a rendelés mentésekor:', error);
-        }
+    console.log("Elküldött rendelési adatok:", orderData);
+
+    this.cartService.placeOrder(orderData).subscribe({
+      next: (response: any) => {
+        console.log('Rendelés sikeresen mentve:', response);
+        this.orderSuccessPopupVisible = false;
+        this.clearCart();
+      },
+      error: (error: any) => {
+        console.error('Hiba történt a rendelés mentésekor:', error);
       }
-    )
+    });
   }
 }

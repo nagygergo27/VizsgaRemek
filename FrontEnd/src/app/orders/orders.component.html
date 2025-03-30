@@ -6,19 +6,34 @@
       <th>Felhasználó</th>
       <th>Dátum</th>
       <th>Tételek</th>
+      <th>Státusz</th>
+      <th>Művelet</th>
+    </tr>
   </thead>
   <tbody>
     <tr *ngFor="let order of orders">
-      <td>{{ searchUser(order.uId)}}</td>
+      <td>{{ searchUser(order.uId) }}</td>
       <td>{{ order.date | date: 'yyyy-MM-dd HH:mm' }}</td>
       <td>
         <div *ngFor="let item of order.items">
-            <span>ID: {{item.productId}}, </span>
-            <span >{{item.piece}} Darab, </span>
-            <span>{{item.price}} Ft</span>
-
-
+          <span>ID: {{ item.productId }}, </span>
+          <span>{{ item.piece }} Darab, </span>
+          <span>{{ item.price }} Ft</span>
         </div>
+      </td>
+      <td>
+        <select [(ngModel)]="order.status" class="form-select" [ngClass]="{
+          'text-dark': order.status === 'Feldolgozásra vár',
+          'text-warning': order.status === 'Gyártás alatt',
+          'text-success': order.status === 'Átadva a futárnak',
+          'text-danger': order.status === 'Visszavonva'
+        }" (change)="updateOrderStatus(order)">
+          
+          <option value="Feldolgozásra vár">Feldolgozásra vár</option>
+          <option value="Gyártás alatt">Gyártás alatt</option>
+          <option value="Átadva a futárnak">Átadva a futárnak</option>
+          <option value="Visszavonva">Visszavonva</option>
+        </select>
       </td>
       <td>
         <button class="btn btn-danger btn-sm" (click)="deleteOrder(order.id)">Törlés</button>
