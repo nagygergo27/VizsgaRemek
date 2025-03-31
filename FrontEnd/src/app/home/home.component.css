@@ -79,3 +79,37 @@ p {
   background-color: rgba(red, green, blue, 0);
   color: #afafaf;
 }
+
+/* Testreszabott Bootstrap gombok színek */
+.btn-custom-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-custom-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-custom-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn-custom-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-custom-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-custom-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}

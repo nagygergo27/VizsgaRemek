@@ -94,26 +94,6 @@ body {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .row-cols-md-2 {
-    row-gap: 1rem;
-  }
-  .product-image-container {
-    width: 100%;
-    height: auto; 
-  }
-}
-
-@media (max-width: 576px) {
-  .row-cols-1 {
-    margin-bottom: 2rem;
-  }
-  .product-image-container {
-    width: 100%;
-    height: auto; 
-  }
-}
-
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -238,4 +218,24 @@ body.modal-open {
 .searchbutton:active {
   background-color: #646464;
   transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .row-cols-md-2 {
+    row-gap: 1rem;
+  }
+  .product-image-container {
+    width: 100%;
+    height: auto; 
+  }
+}
+
+@media (max-width: 576px) {
+  .row-cols-1 {
+    margin-bottom: 2rem;
+  }
+  .product-image-container {
+    width: 100%;
+    height: auto; 
+  }
 }

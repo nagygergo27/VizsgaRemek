@@ -20,18 +20,6 @@
                     <div class="form-check form-switch">
                         <input 
                             (change)="change(user.uid)" 
-                            [(ngModel)]="user.claims.moderator" 
-                            class="form-check-input" 
-                            type="checkbox" 
-                            [id]="'moderator_' + user.uid"
-                        >
-                        <label class="form-check-label" [for]="'moderator_' + user.uid">Moderator</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-check form-switch">
-                        <input 
-                            (change)="change(user.uid)" 
                             [(ngModel)]="user.claims.admin" 
                             class="form-check-input" 
                             type="checkbox" 
@@ -44,4 +32,3 @@
         </div>
     </div>
 </div>
-
